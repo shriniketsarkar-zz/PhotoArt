@@ -21,7 +21,6 @@
 		ED83D83F14EFFEDD005AA1A8 /* CollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D83E14EFFEDD005AA1A8 /* CollageViewController.m */; };
 		ED83D84214EFFF04005AA1A8 /* EffectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */; };
 		ED8BFACB14F217B900F60C79 /* iPhoneBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED8BFACA14F217B900F60C79 /* iPhoneBackground.jpg */; };
-		EDA8DA6314F16763009FCC89 /* PhotoArtTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8DA6214F16763009FCC89 /* PhotoArtTabController.m */; };
 		EDA8DA7C14F1F68F009FCC89 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8DA7B14F1F68F009FCC89 /* CameraViewController.m */; };
 		EDA8DA8614F20FD0009FCC89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA8DA8514F20FD0009FCC89 /* QuartzCore.framework */; };
 		EDB3E82714E634E4007610C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3E82614E634E4007610C2 /* UIKit.framework */; };
@@ -73,8 +72,6 @@
 		ED83D84014EFFF04005AA1A8 /* EffectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsViewController.h; sourceTree = "<group>"; };
 		ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectsViewController.m; sourceTree = "<group>"; };
 		ED8BFACA14F217B900F60C79 /* iPhoneBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPhoneBackground.jpg; sourceTree = "<group>"; };
-		EDA8DA6114F16763009FCC89 /* PhotoArtTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoArtTabController.h; sourceTree = "<group>"; };
-		EDA8DA6214F16763009FCC89 /* PhotoArtTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoArtTabController.m; sourceTree = "<group>"; };
 		EDA8DA7A14F1F68F009FCC89 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		EDA8DA7B14F1F68F009FCC89 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		EDA8DA8514F20FD0009FCC89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -213,8 +210,6 @@
 				EDB3E83614E634E4007610C2 /* PhotoTwistAppDelegate.m */,
 				EDB3E83814E634E4007610C2 /* MainStoryboard.storyboard */,
 				EDB3E82D14E634E4007610C2 /* Supporting Files */,
-				EDA8DA6114F16763009FCC89 /* PhotoArtTabController.h */,
-				EDA8DA6214F16763009FCC89 /* PhotoArtTabController.m */,
 			);
 			path = PhotoTwist;
 			sourceTree = "<group>";
@@ -393,7 +388,6 @@
 				ED83D82714EFFA12005AA1A8 /* ELCImagePickerController.m in Sources */,
 				ED83D83F14EFFEDD005AA1A8 /* CollageViewController.m in Sources */,
 				ED83D84214EFFF04005AA1A8 /* EffectsViewController.m in Sources */,
-				EDA8DA6314F16763009FCC89 /* PhotoArtTabController.m in Sources */,
 				EDA8DA7C14F1F68F009FCC89 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

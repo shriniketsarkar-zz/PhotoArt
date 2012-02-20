@@ -5,51 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
-        <scene sceneID="5">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="PhotoTwistViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JCD-e1-BKK">
-                                <rect key="frame" x="20" y="359" width="93" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="About Us">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J34-xo-Zz4">
-                                <rect key="frame" x="228" y="359" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Skip">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="XqV-Sr-CIm">
-                                <rect key="frame" x="20" y="20" width="280" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uve-3A-VUt"/>
-                    <navigationItem key="navigationItem" title="Photo Twist" id="8vP-8c-Yny"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-2655" y="-6605"/>
-        </scene>
         <scene sceneID="l0X-i2-Q1l">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKR-u5-qoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,7 +50,7 @@
                     <navigationItem key="navigationItem" id="ayG-zK-4mX"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3399" y="-6757"/>
+            <point key="canvasLocation" x="-3491" y="-7277"/>
         </scene>
         <scene sceneID="ja4-91-AEV">
             <objects>
@@ -114,7 +69,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2241" y="-6605"/>
+            <point key="canvasLocation" x="-3013" y="-6337"/>
         </scene>
         <scene sceneID="bpa-Qa-nVR">
             <objects>
@@ -175,6 +130,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="IL2-GU-NsS"/>
                     <toolbarItems>
                         <barButtonItem title="Cancel" id="S4p-BE-P7h">
                             <connections>
@@ -218,7 +174,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3100" y="-5569"/>
+            <point key="canvasLocation" x="-2480" y="-7033"/>
         </scene>
         <scene sceneID="g2R-O7-l9G">
             <objects>
@@ -231,39 +187,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="xaL-Ed-DVT"/>
                         <segue destination="eT4-md-4Sd" kind="relationship" relationship="viewControllers" id="hAD-8o-skH"/>
-                        <segue destination="Uoo-Lr-xbj" kind="relationship" relationship="viewControllers" id="nFn-dO-CLc"/>
                         <segue destination="djv-4v-Cma" kind="relationship" relationship="viewControllers" id="X8f-uT-2IX"/>
+                        <segue destination="hVh-po-5E9" kind="relationship" relationship="viewControllers" id="ZD7-Cc-e3w"/>
                     </connections>
                 </tabBarController>
             </objects>
             <point key="canvasLocation" x="-4070" y="-6605"/>
-        </scene>
-        <scene sceneID="8U5-4f-sDh">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JnC-rn-gVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController toolbarHidden="NO" id="Uoo-Lr-xbj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collage" id="dEl-zt-wLR"/>
-                    <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackTranslucent" id="6Yq-Ue-O5B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" barStyle="blackTranslucent" id="9ug-EA-1qc">
-                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="hVh-po-5E9" kind="relationship" relationship="rootViewController" id="qOD-uE-AjZ"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-3998" y="-5865"/>
         </scene>
     </scenes>
     <resources>
