@@ -39,7 +39,7 @@
 
 - (IBAction)goBackRetainingView:(id)sender;
 
-
+-(void)customizeCollageViewController;
 
 
 

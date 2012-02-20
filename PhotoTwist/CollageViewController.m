@@ -28,6 +28,7 @@
         {
             [self.navigationController setNavigationBarHidden:NO animated:YES];
             [self.navigationController setToolbarHidden:NO animated:YES];
+            
         }
         else
         {
@@ -95,16 +96,17 @@
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(capturedImage, nil, nil, nil);
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)dismissCollageView:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)goBackRetainingView:(id)sender {
     PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.retainStateOfCollage = YES;
 }
-
 -(void)invokeImagePicker
 {
     ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
@@ -115,10 +117,21 @@
 }
 #pragma mark ELCImagePickerControllerDelegate Methods
 
-- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info {
-	
+- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info 
+{
+        //Dismiss the picker.
 	[self dismissModalViewControllerAnimated:YES];
-    NSInteger counter = 101;
+    //Prepare the view with the images.
+    NSInteger counter = 101;    //referes to the indentifiers.
+
+    if ([info count] < 12) 
+    {
+        for (NSInteger i=counter+[info count]; i<=112; i++) 
+        {
+            UIImageView *imageView = (UIImageView*)[self.view viewWithTag:i];
+            imageView.hidden = YES;
+        }
+    }
     for(NSDictionary *dict in info) 
     {
         if (counter >= 101 && counter <=112) 
@@ -127,14 +140,8 @@
             imageView.image = [dict objectForKey:UIImagePickerControllerOriginalImage];
             counter+=1;
         }
-	}
-
-    
-    //Loose the Status Bar and Navigation Bar
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    //[[UIApplication sharedApplication] setStatusBarHidden:YES];
-    //[self.navigationController setHidesBottomBarWhenPushed:YES];
-    [self.navigationController setToolbarHidden:YES animated:YES];
+    }
+    [self customizeCollageViewController];
 }
 
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker {
@@ -142,6 +149,13 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+-(void)customizeCollageViewController
+{
+    //Loose the Status Bar and Navigation Bar
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [self.navigationController setToolbarHidden:YES animated:YES];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -152,21 +166,11 @@
 }
 
 #pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
+-(void) viewDidAppear:(BOOL)animated
 {
+    [self customizeCollageViewController];
 }
-*/  
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
 
 - (void)viewDidUnload
 {
@@ -182,9 +186,6 @@
     [self setImageView10:nil];
     [self setImageView11:nil];
     [self setImageView12:nil];
-    
-
-
     [self setBtnCollageCapture:nil];
     [self setBtnCollageCancel:nil];
     [super viewDidUnload];

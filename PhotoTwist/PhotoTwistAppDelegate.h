@@ -13,6 +13,6 @@
     bool retainStateOfCollage;
 }
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)  UIWindow *window;
 @property (nonatomic, assign) bool retainStateOfCollage;
 @end
