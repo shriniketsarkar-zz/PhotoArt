@@ -12,10 +12,12 @@
 @implementation CollageViewController
 @synthesize btnCollageCapture;
 @synthesize btnCollageCancel;
+@synthesize sliderVertical;
 @synthesize imageView1,imageView2,imageView3,imageView4,imageView5,imageView6;
 @synthesize imageView7,imageView8,imageView9,imageView10,imageView11,imageView12;
 @synthesize isImageViewInMotionAlready= _isImageViewInMotionAlready;
 @synthesize imageViewBeingDragged=_imageViewBeingDragged;
+@synthesize singleTapLocation = _singleTapLocation;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -28,7 +30,7 @@
         {
             [self.navigationController setNavigationBarHidden:NO animated:YES];
             [self.navigationController setToolbarHidden:NO animated:YES];
-            
+           
         }
         else
         {
@@ -36,7 +38,15 @@
             [self.navigationController setToolbarHidden:YES animated:YES];
         }
         
-    }else
+    }else if (touch.tapCount == 1)
+    {
+        self.singleTapLocation = [touch locationInView:touch.view];
+        if (sliderVertical.hidden == YES)
+            sliderVertical.hidden = NO;
+        else
+            sliderVertical.hidden =YES;
+    }
+    else 
     {
         CGPoint location = [touch locationInView:touch.view];
         if (self.isImageViewInMotionAlready == NO)
@@ -83,6 +93,15 @@
 {
     UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"iPhoneBackground.jpg"]];
     self.view.backgroundColor = backgroundColor;
+    //Setting the slider verticle.
+    sliderVertical.transform = CGAffineTransformRotate(sliderVertical.transform, 90.0/180*M_PI);
+    [sliderVertical setFrame:CGRectMake(10, 50, 10, 350)];
+    sliderVertical.value = 0;
+    sliderVertical.minimumValue = 0.1;
+    sliderVertical.maximumValue = 1.1;
+    sliderVertical.continuous = YES;
+    sliderVertical.Hidden = YES;
+    
     
     PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     if (!appDelegate.retainStateOfCollage)
@@ -96,11 +115,15 @@
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(capturedImage, nil, nil, nil);
-    [self dismissModalViewControllerAnimated:YES];
+    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    appDelegate.retainStateOfCollage = NO;
 }
 
 - (IBAction)dismissCollageView:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    appDelegate.retainStateOfCollage = NO;
+//    [self dismissModalViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)goBackRetainingView:(id)sender {
@@ -157,6 +180,21 @@
     [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    for (NSInteger i =101; i<=112; i++) 
+    {
+        UIImageView *imageView = (UIImageView *)[self.view viewWithTag:i];
+        if (!imageView.hidden && CGRectContainsPoint(imageView.frame, self.singleTapLocation))
+        {
+            if (imageView.bounds.size.width <=204 && imageView.bounds.size.width >= 104)
+            {
+                [imageView setFrame:CGRectMake((imageView.center.x - imageView.frame.size.width/2), (imageView.center.y-imageView.frame.size.height/2), (imageView.frame.size.width+([sliderVertical value]*100)), imageView.frame.size.height+([sliderVertical value]*100))];
+            }
+        }
+    }
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -168,6 +206,8 @@
 #pragma mark - View lifecycle
 -(void) viewDidAppear:(BOOL)animated
 {
+    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    appDelegate.retainStateOfCollage = YES;
     [self customizeCollageViewController];
 }
 
@@ -188,6 +228,7 @@
     [self setImageView12:nil];
     [self setBtnCollageCapture:nil];
     [self setBtnCollageCancel:nil];
+    [self setSliderVertical:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

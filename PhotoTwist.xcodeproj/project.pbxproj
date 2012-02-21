@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED7154B514F317AF00C336AA /* StandingCollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7154B414F317AF00C336AA /* StandingCollageViewController.m */; };
 		ED83D82314EFFA12005AA1A8 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81A14EFFA12005AA1A8 /* ELCAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED83D82414EFFA12005AA1A8 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81C14EFFA12005AA1A8 /* ELCAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED83D82514EFFA12005AA1A8 /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81E14EFFA12005AA1A8 /* ELCAssetCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED7154B314F317AF00C336AA /* StandingCollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingCollageViewController.h; sourceTree = "<group>"; };
+		ED7154B414F317AF00C336AA /* StandingCollageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingCollageViewController.m; sourceTree = "<group>"; };
 		ED83D81914EFFA12005AA1A8 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		ED83D81A14EFFA12005AA1A8 /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
 		ED83D81B14EFFA12005AA1A8 /* ELCAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAsset.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				ED83D83E14EFFEDD005AA1A8 /* CollageViewController.m */,
 				ED83D84014EFFF04005AA1A8 /* EffectsViewController.h */,
 				ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */,
+				ED7154B314F317AF00C336AA /* StandingCollageViewController.h */,
+				ED7154B414F317AF00C336AA /* StandingCollageViewController.m */,
 			);
 			name = PhotoArt;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				ED83D83F14EFFEDD005AA1A8 /* CollageViewController.m in Sources */,
 				ED83D84214EFFF04005AA1A8 /* EffectsViewController.m in Sources */,
 				EDA8DA7C14F1F68F009FCC89 /* CameraViewController.m in Sources */,
+				ED7154B514F317AF00C336AA /* StandingCollageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

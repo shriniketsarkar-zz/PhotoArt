@@ -13,9 +13,11 @@
 {
     bool isImageViewInMotionAlready;
     NSInteger *imageViewBeingDragged;
+    CGPoint singleTapLocation;
 }
 @property (nonatomic, assign) bool isImageViewInMotionAlready;
 @property (nonatomic, assign) NSInteger imageViewBeingDragged;
+@property (nonatomic, assign) CGPoint singleTapLocation;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
@@ -31,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView12;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCollageCapture;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCollageCancel;
+@property (weak, nonatomic) IBOutlet UISlider *sliderVertical;
 
 
 - (IBAction)captureScreenImage:(id)sender;
@@ -41,6 +44,7 @@
 
 -(void)customizeCollageViewController;
 
+- (IBAction)sliderValueChanged:(id)sender;
 
 
 -(void)invokeImagePicker;
