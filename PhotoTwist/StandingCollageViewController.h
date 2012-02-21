@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnNewCollage;
 @property (weak, nonatomic) IBOutlet UIToolbar *collageToolBar;
-- (IBAction)resumeExistingCollage:(id)sender;
-
-- (IBAction)loadNewCollage:(id)sender;
+//- (IBAction)resumeExistingCollage:(id)sender;
+//
+//- (IBAction)loadNewCollage:(id)sender;
 @end

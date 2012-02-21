@@ -120,13 +120,13 @@
                                 <items>
                                     <barButtonItem tag="101" title="New Collage" id="2hu-P0-OL3">
                                         <connections>
-                                            <action selector="loadNewCollage:" destination="7s1-GS-yVn" id="3BZ-Ru-Qhq"/>
+                                            <segue destination="hVh-po-5E9" kind="push" id="1dv-yu-tK7"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ywM-5f-ZDO"/>
                                     <barButtonItem tag="102" title="Resume" id="wPh-ok-LgZ">
                                         <connections>
-                                            <action selector="resumeExistingCollage:" destination="7s1-GS-yVn" id="jcg-4Q-WlN"/>
+                                            <segue destination="hVh-po-5E9" kind="push" id="Vmw-UD-MoE"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -318,8 +318,6 @@
         <class className="StandingCollageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StandingCollageViewController.h"/>
             <relationships>
-                <relationship kind="action" name="loadNewCollage:"/>
-                <relationship kind="action" name="resumeExistingCollage:"/>
                 <relationship kind="outlet" name="btnNewCollage" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="btnResumeCollage" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="collageToolBar" candidateClass="UIToolbar"/>
@@ -332,4 +330,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vmw-UD-MoE"/>
+    </inferredMetricsTieBreakers>
 </document>

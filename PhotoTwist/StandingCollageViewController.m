@@ -19,7 +19,7 @@
 {
     //Check if Collage is in Progress.
     PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [collageToolBar setUserInteractionEnabled:YES];
+    //[collageToolBar setUserInteractionEnabled:YES];
 
     if(appDelegate.retainStateOfCollage)
     {
@@ -83,19 +83,19 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-- (IBAction)loadNewCollage:(id)sender 
-{
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        appDelegate.retainStateOfCollage = NO;
-    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
-    [self.navigationController pushViewController:collageViewController animated:YES];
-
-}
-- (IBAction)resumeExistingCollage:(id)sender 
-{
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        appDelegate.retainStateOfCollage = YES;
-    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
-        [self.navigationController pushViewController:collageViewController animated:YES];
-}
+//- (IBAction)loadNewCollage:(id)sender 
+//{
+//    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//        appDelegate.retainStateOfCollage = NO;
+//    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
+//    [self.navigationController pushViewController:collageViewController animated:YES];
+//
+//}
+//- (IBAction)resumeExistingCollage:(id)sender 
+//{
+//    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//        appDelegate.retainStateOfCollage = YES;
+//    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
+//        [self.navigationController pushViewController:collageViewController animated:YES];
+//}
 @end
