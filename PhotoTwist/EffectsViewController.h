@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface EffectsViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewEffectsVC;
+- (IBAction)btnNegateImage:(id)sender;
 
+- (IBAction)btnGrayImage:(id)sender;
 @end

@@ -13,5 +13,6 @@
 @interface AboutUsViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 - (IBAction)sendEmail:(id)sender;
 - (IBAction)sendSMS:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewAboutUS;
 
 @end

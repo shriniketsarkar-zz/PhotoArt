@@ -9,6 +9,7 @@
 #import "EffectsViewController.h"
 
 @implementation EffectsViewController
+@synthesize imageViewEffectsVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,14 +40,13 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"iPhoneBackground.jpg"]];
-    self.view.backgroundColor = backgroundColor;
     [super viewDidLoad];
 }
 
 
 - (void)viewDidUnload
 {
+    [self setImageViewEffectsVC:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -58,4 +58,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)btnNegateImage:(id)sender {
+}
+
+- (IBAction)btnGrayImage:(id)sender {
+}
 @end

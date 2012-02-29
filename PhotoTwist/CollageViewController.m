@@ -37,15 +37,15 @@
             [self.navigationController setNavigationBarHidden:YES animated:YES];
             [self.navigationController setToolbarHidden:YES animated:YES];
         }
-        
-    }else if (touch.tapCount == 1)
-    {
-        self.singleTapLocation = [touch locationInView:touch.view];
-        if (sliderVertical.hidden == YES)
-            sliderVertical.hidden = NO;
-        else
-            sliderVertical.hidden =YES;
-    }
+    }  
+//    }else if (touch.tapCount == 1)
+//    {
+//        self.singleTapLocation = [touch locationInView:touch.view];
+//        if (sliderVertical.hidden == YES)
+//            sliderVertical.hidden = NO;
+//        else
+//            sliderVertical.hidden =YES;
+//    }
     else 
     {
         CGPoint location = [touch locationInView:touch.view];

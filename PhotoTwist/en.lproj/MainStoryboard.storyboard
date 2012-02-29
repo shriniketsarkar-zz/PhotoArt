@@ -13,11 +13,15 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Oa3-75-0Q0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oue-Va-8DX">
-                                <rect key="frame" x="70" y="196" width="180" height="37"/>
+                                <rect key="frame" x="0.0" y="374" width="150" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Email:ShriniketSarkar">
+                                <state key="normal" title="Contact Email">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -29,10 +33,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Nw-Fx-slf">
-                                <rect key="frame" x="74" y="268" width="173" height="37"/>
+                                <rect key="frame" x="170" y="374" width="150" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="SMS:ShriniketSarkar">
+                                <state key="normal" title="Contact SMS">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -52,9 +56,73 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="imageViewAboutUS" destination="Oa3-75-0Q0" id="kub-j9-3Lc"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-5862" y="-8477"/>
+            <point key="canvasLocation" x="-6670" y="-8321"/>
+        </scene>
+        <scene sceneID="JKt-Q2-vrB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaj-T2-URo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="805-Kr-j4j" customClass="FBFunViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oaa-3e-rYE">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="R3c-cb-Qfe">
+                                <rect key="frame" x="221" y="43" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchFBOnOff:" destination="805-Kr-j4j" eventType="valueChanged" id="Qss-tZ-46Z"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="Z72-td-6o4">
+                                <rect key="frame" x="26" y="46" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" enabled="NO" id="GRR-Q7-bjy">
+                                <rect key="frame" x="26" y="115" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k4z-sR-tJZ">
+                                <rect key="frame" x="224" y="107" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="805-Kr-j4j" eventType="touchUpInside" id="u4q-d4-sQL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="bQi-BB-A8a"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="loginButton" destination="k4z-sR-tJZ" id="o05-cm-u32"/>
+                        <outlet property="loginStatusLabel" destination="GRR-Q7-bjy" id="7zo-jj-Jov"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-4621" y="-8335"/>
         </scene>
         <scene sceneID="ja4-91-AEV">
             <objects>
@@ -63,7 +131,7 @@
                     <view key="view" contentMode="scaleToFill" id="mmW-Zf-ozL">
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="iuN-64-tfG"/>
                     <navigationItem key="navigationItem" id="BQv-5R-GH0"/>
@@ -77,7 +145,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-6833" y="-8225"/>
+            <point key="canvasLocation" x="-6165" y="-8321"/>
         </scene>
         <scene sceneID="i4e-4O-zfa">
             <objects>
@@ -100,7 +168,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-6632" y="-7023"/>
+            <point key="canvasLocation" x="-5692" y="-8335"/>
         </scene>
         <scene sceneID="Kmg-Gn-2nv">
             <objects>
@@ -147,7 +215,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-6011" y="-7057"/>
+            <point key="canvasLocation" x="-5687" y="-8937"/>
         </scene>
         <scene sceneID="bpa-Qa-nVR">
             <objects>
@@ -254,7 +322,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-5415" y="-7074"/>
+            <point key="canvasLocation" x="-5259" y="-8937"/>
         </scene>
         <scene sceneID="g2R-O7-l9G">
             <objects>
@@ -267,13 +335,59 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eT4-md-4Sd" kind="relationship" relationship="viewControllers" id="hAD-8o-skH"/>
                         <segue destination="djv-4v-Cma" kind="relationship" relationship="viewControllers" id="X8f-uT-2IX"/>
+                        <segue destination="eT4-md-4Sd" kind="relationship" relationship="viewControllers" id="hAD-8o-skH"/>
                         <segue destination="dNs-Vc-Z3x" kind="relationship" relationship="viewControllers" id="HUe-Bl-wND"/>
+                        <segue destination="R7M-I7-xGl" kind="relationship" relationship="viewControllers" id="Vim-gG-kfg"/>
+                        <segue destination="805-Kr-j4j" kind="relationship" relationship="viewControllers" id="MnX-ip-Ao1"/>
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-6050" y="-7637"/>
+            <point key="canvasLocation" x="-5930" y="-7725"/>
+        </scene>
+        <scene sceneID="BkE-eR-T9G">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-wX-B4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="featuresVC" title="Features" id="R7M-I7-xGl" customClass="EffectsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SIe-8r-eJg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="43h-wd-mB2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Qip-TZ-ZhG">
+                                <rect key="frame" x="0.0" y="367" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="GrayImage" id="tzg-qX-WtM">
+                                        <connections>
+                                            <action selector="btnGrayImage:" destination="R7M-I7-xGl" id="WHW-56-0YZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Negative" id="6Ck-AA-vmy">
+                                        <connections>
+                                            <action selector="btnNegateImage:" destination="R7M-I7-xGl" id="YPo-5L-9Di"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Features" id="cZS-HW-84G"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageViewEffectsVC" destination="43h-wd-mB2" id="OFV-zs-ApO"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-5116" y="-8335"/>
         </scene>
     </scenes>
     <resources>
@@ -286,6 +400,7 @@
             <relationships>
                 <relationship kind="action" name="sendEmail:"/>
                 <relationship kind="action" name="sendSMS:"/>
+                <relationship kind="outlet" name="imageViewAboutUS" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="CameraViewController" superclassName="UIViewController">
@@ -313,6 +428,24 @@
                 <relationship kind="outlet" name="imageView8" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageView9" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="sliderVertical" candidateClass="UISlider"/>
+            </relationships>
+        </class>
+        <class className="EffectsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EffectsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnGrayImage:"/>
+                <relationship kind="action" name="btnNegateImage:"/>
+                <relationship kind="outlet" name="imageViewEffectsVC" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FBFunViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFunViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTapped:"/>
+                <relationship kind="action" name="switchFBOnOff:"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loginDialogView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="loginStatusLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="StandingCollageViewController" superclassName="UIViewController">

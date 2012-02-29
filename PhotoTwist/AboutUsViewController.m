@@ -9,7 +9,32 @@
 #import "AboutUsViewController.h"
 
 @implementation AboutUsViewController
-
+@synthesize imageViewAboutUS;
+-(void)viewDidAppear:(BOOL)animated
+{
+    imageViewAboutUS.animationImages = [NSArray arrayWithObjects:
+                                        [UIImage imageNamed:@"PhotoArtBase1.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase2.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase3.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase4.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase5.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase6.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase7.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase8.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase9.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase10.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase11.jpg"],
+                                        [UIImage imageNamed:@"PhotoArtBase12.jpg"],nil];
+    
+    
+    imageViewAboutUS.animationDuration = 3;
+    imageViewAboutUS.animationRepeatCount = 0;
+    [imageViewAboutUS startAnimating];
+    
+    
+    
+    
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,6 +73,7 @@
 
 - (void)viewDidUnload
 {
+    [self setImageViewAboutUS:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -81,7 +107,6 @@
     NSString *emailBody = @"This is a dummy mail";
     [picker setMessageBody:emailBody isHTML:NO];
     [self presentModalViewController:picker animated:YES];
-    //[picker release]; Since we are using ARC
 }
 
 - (IBAction)sendSMS:(id)sender {
