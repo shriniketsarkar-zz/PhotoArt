@@ -14,5 +14,5 @@
 - (IBAction)sendEmail:(id)sender;
 - (IBAction)sendSMS:(id)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewAboutUS;
-
+-(void)runAnimation;
 @end

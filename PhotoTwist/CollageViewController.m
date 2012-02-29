@@ -91,7 +91,7 @@
 }
 -(void)viewDidLoad
 {
-    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"iPhoneBackground.jpg"]];
+    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"PhotoArtBase.png"]];
     self.view.backgroundColor = backgroundColor;
     //Setting the slider verticle.
     sliderVertical.transform = CGAffineTransformRotate(sliderVertical.transform, 90.0/180*M_PI);

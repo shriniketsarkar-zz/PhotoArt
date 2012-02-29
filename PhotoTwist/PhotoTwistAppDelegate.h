@@ -15,4 +15,5 @@
 
 @property (strong, nonatomic)  UIWindow *window;
 @property (nonatomic, assign) bool retainStateOfCollage;
+@property (weak, nonatomic) IBOutlet UITabBarController *tabBarPhotoTwist;
 @end

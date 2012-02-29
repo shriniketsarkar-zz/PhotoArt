@@ -20,7 +20,8 @@
     [super viewDidLoad];
 
 	[self.navigationItem setTitle:@"Loading..."];
-
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+    
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.parent action:@selector(cancelImagePicker)];
 	[self.navigationItem setRightBarButtonItem:cancelButton];
 	[cancelButton release];

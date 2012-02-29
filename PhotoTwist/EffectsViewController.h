@@ -11,6 +11,8 @@
 @interface EffectsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEffectsVC;
 - (IBAction)btnNegateImage:(id)sender;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnGrayImage;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnNegative;
 
 - (IBAction)btnGrayImage:(id)sender;
 @end

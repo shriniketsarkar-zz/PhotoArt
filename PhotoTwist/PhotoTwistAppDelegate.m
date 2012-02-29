@@ -12,8 +12,10 @@
 
 @synthesize window = _window;
 @synthesize retainStateOfCollage=_retainStateOfCollage;
+@synthesize tabBarPhotoTwist = _tabBarPhotoTwist;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    application.statusBarStyle =UIStatusBarStyleBlackTranslucent;
     // Override point for customization after application launch.
     retainStateOfCollage = NO; 
     return YES;

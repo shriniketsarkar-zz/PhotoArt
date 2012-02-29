@@ -12,6 +12,10 @@
 @synthesize imageViewAboutUS;
 -(void)viewDidAppear:(BOOL)animated
 {
+    [NSThread detachNewThreadSelector:@selector(runAnimation) toTarget:self withObject:nil];
+}
+-(void)runAnimation
+{
     imageViewAboutUS.animationImages = [NSArray arrayWithObjects:
                                         [UIImage imageNamed:@"PhotoArtBase1.jpg"],
                                         [UIImage imageNamed:@"PhotoArtBase2.jpg"],
@@ -27,13 +31,10 @@
                                         [UIImage imageNamed:@"PhotoArtBase12.jpg"],nil];
     
     
-    imageViewAboutUS.animationDuration = 3;
+    imageViewAboutUS.animationDuration = 3.5;
     imageViewAboutUS.animationRepeatCount = 0;
     [imageViewAboutUS startAnimating];
-    
-    
-    
-    
+
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -65,7 +66,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"iPhoneBackground.jpg"]];
+    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"PhotoArtBase.png"]];
     self.view.backgroundColor = backgroundColor;
     [super viewDidLoad];
 }

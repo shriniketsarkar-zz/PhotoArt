@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		ED0D051C14FDB78500B3D3F1 /* PhotoArtBase.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0D051B14FDB78500B3D3F1 /* PhotoArtBase.png */; };
-		ED384E3D14FE7E8F00289BD9 /* PhotoArtBase1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3114FE7E8F00289BD9 /* PhotoArtBase1.jpg */; };
-		ED384E3E14FE7E8F00289BD9 /* PhotoArtBase2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3214FE7E8F00289BD9 /* PhotoArtBase2.jpg */; };
-		ED384E3F14FE7E8F00289BD9 /* PhotoArtBase3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3314FE7E8F00289BD9 /* PhotoArtBase3.jpg */; };
-		ED384E4014FE7E8F00289BD9 /* PhotoArtBase4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3414FE7E8F00289BD9 /* PhotoArtBase4.jpg */; };
-		ED384E4114FE7E8F00289BD9 /* PhotoArtBase5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3514FE7E8F00289BD9 /* PhotoArtBase5.jpg */; };
-		ED384E4214FE7E8F00289BD9 /* PhotoArtBase6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3614FE7E8F00289BD9 /* PhotoArtBase6.jpg */; };
-		ED384E4314FE7E8F00289BD9 /* PhotoArtBase7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3714FE7E8F00289BD9 /* PhotoArtBase7.jpg */; };
-		ED384E4414FE7E8F00289BD9 /* PhotoArtBase8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3814FE7E8F00289BD9 /* PhotoArtBase8.jpg */; };
-		ED384E4514FE7E8F00289BD9 /* PhotoArtBase9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3914FE7E8F00289BD9 /* PhotoArtBase9.jpg */; };
-		ED384E4614FE7E8F00289BD9 /* PhotoArtBase10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3A14FE7E8F00289BD9 /* PhotoArtBase10.jpg */; };
-		ED384E4714FE7E8F00289BD9 /* PhotoArtBase11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3B14FE7E8F00289BD9 /* PhotoArtBase11.jpg */; };
-		ED384E4814FE7E8F00289BD9 /* PhotoArtBase12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E3C14FE7E8F00289BD9 /* PhotoArtBase12.jpg */; };
+		ED384E5014FE989200289BD9 /* PhotoTwistTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED384E4F14FE989200289BD9 /* PhotoTwistTabBarController.m */; };
+		ED384E5E14FEBC5100289BD9 /* PhotoArtBase1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5214FEBC5100289BD9 /* PhotoArtBase1.jpg */; };
+		ED384E5F14FEBC5100289BD9 /* PhotoArtBase2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5314FEBC5100289BD9 /* PhotoArtBase2.jpg */; };
+		ED384E6014FEBC5100289BD9 /* PhotoArtBase3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5414FEBC5100289BD9 /* PhotoArtBase3.jpg */; };
+		ED384E6114FEBC5100289BD9 /* PhotoArtBase4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5514FEBC5100289BD9 /* PhotoArtBase4.jpg */; };
+		ED384E6214FEBC5100289BD9 /* PhotoArtBase5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5614FEBC5100289BD9 /* PhotoArtBase5.jpg */; };
+		ED384E6314FEBC5100289BD9 /* PhotoArtBase6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5714FEBC5100289BD9 /* PhotoArtBase6.jpg */; };
+		ED384E6414FEBC5100289BD9 /* PhotoArtBase7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5814FEBC5100289BD9 /* PhotoArtBase7.jpg */; };
+		ED384E6514FEBC5100289BD9 /* PhotoArtBase8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5914FEBC5100289BD9 /* PhotoArtBase8.jpg */; };
+		ED384E6614FEBC5100289BD9 /* PhotoArtBase9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5A14FEBC5100289BD9 /* PhotoArtBase9.jpg */; };
+		ED384E6714FEBC5100289BD9 /* PhotoArtBase10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5B14FEBC5100289BD9 /* PhotoArtBase10.jpg */; };
+		ED384E6814FEBC5100289BD9 /* PhotoArtBase11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5C14FEBC5100289BD9 /* PhotoArtBase11.jpg */; };
+		ED384E6914FEBC5100289BD9 /* PhotoArtBase12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED384E5D14FEBC5100289BD9 /* PhotoArtBase12.jpg */; };
 		ED65795D14F95FF90099C01A /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ED65795A14F95FF90099C01A /* SVProgressHUD.bundle */; };
 		ED65795E14F95FF90099C01A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ED65795C14F95FF90099C01A /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED65796E14F988FC0099C01A /* FBFunLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED65796C14F988FC0099C01A /* FBFunLoginDialog.m */; };
@@ -39,7 +40,6 @@
 		ED83D83414EFFBB1005AA1A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED83D83314EFFBB1005AA1A8 /* AssetsLibrary.framework */; };
 		ED83D83F14EFFEDD005AA1A8 /* CollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D83E14EFFEDD005AA1A8 /* CollageViewController.m */; };
 		ED83D84214EFFF04005AA1A8 /* EffectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */; };
-		ED8BFACB14F217B900F60C79 /* iPhoneBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED8BFACA14F217B900F60C79 /* iPhoneBackground.jpg */; };
 		EDA8DA7C14F1F68F009FCC89 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA8DA7B14F1F68F009FCC89 /* CameraViewController.m */; };
 		EDA8DA8614F20FD0009FCC89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDA8DA8514F20FD0009FCC89 /* QuartzCore.framework */; };
 		EDB3E82714E634E4007610C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3E82614E634E4007610C2 /* UIKit.framework */; };
@@ -71,18 +71,20 @@
 
 /* Begin PBXFileReference section */
 		ED0D051B14FDB78500B3D3F1 /* PhotoArtBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoArtBase.png; sourceTree = "<group>"; };
-		ED384E3114FE7E8F00289BD9 /* PhotoArtBase1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase1.jpg; sourceTree = "<group>"; };
-		ED384E3214FE7E8F00289BD9 /* PhotoArtBase2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase2.jpg; sourceTree = "<group>"; };
-		ED384E3314FE7E8F00289BD9 /* PhotoArtBase3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase3.jpg; sourceTree = "<group>"; };
-		ED384E3414FE7E8F00289BD9 /* PhotoArtBase4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase4.jpg; sourceTree = "<group>"; };
-		ED384E3514FE7E8F00289BD9 /* PhotoArtBase5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase5.jpg; sourceTree = "<group>"; };
-		ED384E3614FE7E8F00289BD9 /* PhotoArtBase6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase6.jpg; sourceTree = "<group>"; };
-		ED384E3714FE7E8F00289BD9 /* PhotoArtBase7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase7.jpg; sourceTree = "<group>"; };
-		ED384E3814FE7E8F00289BD9 /* PhotoArtBase8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase8.jpg; sourceTree = "<group>"; };
-		ED384E3914FE7E8F00289BD9 /* PhotoArtBase9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase9.jpg; sourceTree = "<group>"; };
-		ED384E3A14FE7E8F00289BD9 /* PhotoArtBase10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase10.jpg; sourceTree = "<group>"; };
-		ED384E3B14FE7E8F00289BD9 /* PhotoArtBase11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase11.jpg; sourceTree = "<group>"; };
-		ED384E3C14FE7E8F00289BD9 /* PhotoArtBase12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase12.jpg; sourceTree = "<group>"; };
+		ED384E4E14FE989200289BD9 /* PhotoTwistTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTwistTabBarController.h; sourceTree = "<group>"; };
+		ED384E4F14FE989200289BD9 /* PhotoTwistTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTwistTabBarController.m; sourceTree = "<group>"; };
+		ED384E5214FEBC5100289BD9 /* PhotoArtBase1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase1.jpg; sourceTree = "<group>"; };
+		ED384E5314FEBC5100289BD9 /* PhotoArtBase2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase2.jpg; sourceTree = "<group>"; };
+		ED384E5414FEBC5100289BD9 /* PhotoArtBase3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase3.jpg; sourceTree = "<group>"; };
+		ED384E5514FEBC5100289BD9 /* PhotoArtBase4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase4.jpg; sourceTree = "<group>"; };
+		ED384E5614FEBC5100289BD9 /* PhotoArtBase5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase5.jpg; sourceTree = "<group>"; };
+		ED384E5714FEBC5100289BD9 /* PhotoArtBase6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase6.jpg; sourceTree = "<group>"; };
+		ED384E5814FEBC5100289BD9 /* PhotoArtBase7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase7.jpg; sourceTree = "<group>"; };
+		ED384E5914FEBC5100289BD9 /* PhotoArtBase8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase8.jpg; sourceTree = "<group>"; };
+		ED384E5A14FEBC5100289BD9 /* PhotoArtBase9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase9.jpg; sourceTree = "<group>"; };
+		ED384E5B14FEBC5100289BD9 /* PhotoArtBase10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase10.jpg; sourceTree = "<group>"; };
+		ED384E5C14FEBC5100289BD9 /* PhotoArtBase11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase11.jpg; sourceTree = "<group>"; };
+		ED384E5D14FEBC5100289BD9 /* PhotoArtBase12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase12.jpg; sourceTree = "<group>"; };
 		ED65795A14F95FF90099C01A /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		ED65795B14F95FF90099C01A /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		ED65795C14F95FF90099C01A /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -113,7 +115,6 @@
 		ED83D83E14EFFEDD005AA1A8 /* CollageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollageViewController.m; sourceTree = "<group>"; };
 		ED83D84014EFFF04005AA1A8 /* EffectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsViewController.h; sourceTree = "<group>"; };
 		ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectsViewController.m; sourceTree = "<group>"; };
-		ED8BFACA14F217B900F60C79 /* iPhoneBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iPhoneBackground.jpg; sourceTree = "<group>"; };
 		EDA8DA7A14F1F68F009FCC89 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		EDA8DA7B14F1F68F009FCC89 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		EDA8DA8514F20FD0009FCC89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -170,18 +171,18 @@
 		ED0D051714FDB5DD00B3D3F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ED384E3114FE7E8F00289BD9 /* PhotoArtBase1.jpg */,
-				ED384E3214FE7E8F00289BD9 /* PhotoArtBase2.jpg */,
-				ED384E3314FE7E8F00289BD9 /* PhotoArtBase3.jpg */,
-				ED384E3414FE7E8F00289BD9 /* PhotoArtBase4.jpg */,
-				ED384E3514FE7E8F00289BD9 /* PhotoArtBase5.jpg */,
-				ED384E3614FE7E8F00289BD9 /* PhotoArtBase6.jpg */,
-				ED384E3714FE7E8F00289BD9 /* PhotoArtBase7.jpg */,
-				ED384E3814FE7E8F00289BD9 /* PhotoArtBase8.jpg */,
-				ED384E3914FE7E8F00289BD9 /* PhotoArtBase9.jpg */,
-				ED384E3A14FE7E8F00289BD9 /* PhotoArtBase10.jpg */,
-				ED384E3B14FE7E8F00289BD9 /* PhotoArtBase11.jpg */,
-				ED384E3C14FE7E8F00289BD9 /* PhotoArtBase12.jpg */,
+				ED384E5214FEBC5100289BD9 /* PhotoArtBase1.jpg */,
+				ED384E5314FEBC5100289BD9 /* PhotoArtBase2.jpg */,
+				ED384E5414FEBC5100289BD9 /* PhotoArtBase3.jpg */,
+				ED384E5514FEBC5100289BD9 /* PhotoArtBase4.jpg */,
+				ED384E5614FEBC5100289BD9 /* PhotoArtBase5.jpg */,
+				ED384E5714FEBC5100289BD9 /* PhotoArtBase6.jpg */,
+				ED384E5814FEBC5100289BD9 /* PhotoArtBase7.jpg */,
+				ED384E5914FEBC5100289BD9 /* PhotoArtBase8.jpg */,
+				ED384E5A14FEBC5100289BD9 /* PhotoArtBase9.jpg */,
+				ED384E5B14FEBC5100289BD9 /* PhotoArtBase10.jpg */,
+				ED384E5C14FEBC5100289BD9 /* PhotoArtBase11.jpg */,
+				ED384E5D14FEBC5100289BD9 /* PhotoArtBase12.jpg */,
 				ED0D051B14FDB78500B3D3F1 /* PhotoArtBase.png */,
 			);
 			name = Images;
@@ -275,7 +276,6 @@
 				ED0D051714FDB5DD00B3D3F1 /* Images */,
 				ED65795914F95FF90099C01A /* SVProgressHUD */,
 				EDC5314C14F8A0E300FDEE6F /* FaceBookIntegration */,
-				ED8BFACA14F217B900F60C79 /* iPhoneBackground.jpg */,
 				EDA8DA7914F1F652009FCC89 /* CameraControllers */,
 				ED83D81714EFF9AF005AA1A8 /* ELC Image Picker */,
 				EDFC919114E70D300012260A /* PhotoArt */,
@@ -284,6 +284,8 @@
 				EDB3E83514E634E4007610C2 /* PhotoTwistAppDelegate.h */,
 				EDB3E83614E634E4007610C2 /* PhotoTwistAppDelegate.m */,
 				EDB3E83814E634E4007610C2 /* MainStoryboard.storyboard */,
+				ED384E4E14FE989200289BD9 /* PhotoTwistTabBarController.h */,
+				ED384E4F14FE989200289BD9 /* PhotoTwistTabBarController.m */,
 				EDB3E82D14E634E4007610C2 /* Supporting Files */,
 			);
 			path = PhotoTwist;
@@ -432,22 +434,21 @@
 				ED83D83014EFFA37005AA1A8 /* ELCAssetTablePicker.xib in Resources */,
 				ED83D83114EFFA37005AA1A8 /* Overlay.png in Resources */,
 				ED83D83214EFFA37005AA1A8 /* Overlay@2x.png in Resources */,
-				ED8BFACB14F217B900F60C79 /* iPhoneBackground.jpg in Resources */,
 				ED65795D14F95FF90099C01A /* SVProgressHUD.bundle in Resources */,
 				ED65796F14F988FC0099C01A /* FBFunLoginDialog.xib in Resources */,
 				ED0D051C14FDB78500B3D3F1 /* PhotoArtBase.png in Resources */,
-				ED384E3D14FE7E8F00289BD9 /* PhotoArtBase1.jpg in Resources */,
-				ED384E3E14FE7E8F00289BD9 /* PhotoArtBase2.jpg in Resources */,
-				ED384E3F14FE7E8F00289BD9 /* PhotoArtBase3.jpg in Resources */,
-				ED384E4014FE7E8F00289BD9 /* PhotoArtBase4.jpg in Resources */,
-				ED384E4114FE7E8F00289BD9 /* PhotoArtBase5.jpg in Resources */,
-				ED384E4214FE7E8F00289BD9 /* PhotoArtBase6.jpg in Resources */,
-				ED384E4314FE7E8F00289BD9 /* PhotoArtBase7.jpg in Resources */,
-				ED384E4414FE7E8F00289BD9 /* PhotoArtBase8.jpg in Resources */,
-				ED384E4514FE7E8F00289BD9 /* PhotoArtBase9.jpg in Resources */,
-				ED384E4614FE7E8F00289BD9 /* PhotoArtBase10.jpg in Resources */,
-				ED384E4714FE7E8F00289BD9 /* PhotoArtBase11.jpg in Resources */,
-				ED384E4814FE7E8F00289BD9 /* PhotoArtBase12.jpg in Resources */,
+				ED384E5E14FEBC5100289BD9 /* PhotoArtBase1.jpg in Resources */,
+				ED384E5F14FEBC5100289BD9 /* PhotoArtBase2.jpg in Resources */,
+				ED384E6014FEBC5100289BD9 /* PhotoArtBase3.jpg in Resources */,
+				ED384E6114FEBC5100289BD9 /* PhotoArtBase4.jpg in Resources */,
+				ED384E6214FEBC5100289BD9 /* PhotoArtBase5.jpg in Resources */,
+				ED384E6314FEBC5100289BD9 /* PhotoArtBase6.jpg in Resources */,
+				ED384E6414FEBC5100289BD9 /* PhotoArtBase7.jpg in Resources */,
+				ED384E6514FEBC5100289BD9 /* PhotoArtBase8.jpg in Resources */,
+				ED384E6614FEBC5100289BD9 /* PhotoArtBase9.jpg in Resources */,
+				ED384E6714FEBC5100289BD9 /* PhotoArtBase10.jpg in Resources */,
+				ED384E6814FEBC5100289BD9 /* PhotoArtBase11.jpg in Resources */,
+				ED384E6914FEBC5100289BD9 /* PhotoArtBase12.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +498,7 @@
 				ED65795E14F95FF90099C01A /* SVProgressHUD.m in Sources */,
 				ED65796E14F988FC0099C01A /* FBFunLoginDialog.m in Sources */,
 				ED65797514F98BB00099C01A /* FBFunViewController.m in Sources */,
+				ED384E5014FE989200289BD9 /* PhotoTwistTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
