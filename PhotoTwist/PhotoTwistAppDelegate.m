@@ -7,20 +7,73 @@
 //
 
 #import "PhotoTwistAppDelegate.h"
-
+#import "SettingsViewController.h"
+#import "SVProgressHUD.h"
 @implementation PhotoTwistAppDelegate
 
 @synthesize window = _window;
 @synthesize retainStateOfCollage=_retainStateOfCollage;
+@synthesize displayFBLoginUnavailableAlert = _displayFBLoginUnavailableAlert;
 @synthesize tabBarPhotoTwist = _tabBarPhotoTwist;
+@synthesize settingsVC = _settingsVC;
+@synthesize facebook;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    facebook = [[Facebook alloc]initWithAppId:@"275060699231729" andDelegate:self];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) 
+    {
+        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+        _displayFBLoginUnavailableAlert = NO;
+    }
+    if (![facebook isSessionValid]) 
+    {
+        _displayFBLoginUnavailableAlert = YES;
+
+        //[facebook authorize:nil];
+    }
+    
+    
+    
     application.statusBarStyle =UIStatusBarStyleBlackTranslucent;
+    //_settingsVC = [[SettingsViewController alloc]init];
     // Override point for customization after application launch.
-    retainStateOfCollage = NO; 
+    _retainStateOfCollage = NO; 
     return YES;
 }
-							
+// Pre 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@"URL 4.2 = %@",url);
+    return [facebook handleOpenURL:url]; 
+}
+
+// For 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+        NSLog(@"URL 4.2+ = %@",url);
+    return [facebook handleOpenURL:url]; 
+}
+- (void)fbDidLogin 
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    
+}
+- (void) fbDidLogout 
+{
+    // Remove saved authorization information if it exists
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"]) {
+        [defaults removeObjectForKey:@"FBAccessTokenKey"];
+        [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults synchronize];
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -50,7 +103,12 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 }
-
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url 
+//{
+//    NSLog(@"URL: %@",url);
+//    return [_settingsVC.facebook handleOpenURL:url]; 
+//
+//}
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     /*

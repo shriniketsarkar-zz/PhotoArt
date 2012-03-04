@@ -86,36 +86,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-//The Mail compose view controller delegate method
--(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    [self dismissModalViewControllerAnimated:YES];
-}
-
-//The Message compose view controller delegate method
--(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-{
-    [self dismissModalViewControllerAnimated:YES];
-}
 
 
-- (IBAction)sendEmail:(id)sender {
-    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc]init];
-    picker.mailComposeDelegate = self;
-    [picker setSubject:@"PhotoTwist Mail to Shriniket."];
-    NSArray *toRecipients = [NSArray arrayWithObjects:@"firstlast@example.com", nil];
-    [picker setToRecipients:toRecipients];
-    NSString *emailBody = @"This is a dummy mail";
-    [picker setMessageBody:emailBody isHTML:NO];
-    [self presentModalViewController:picker animated:YES];
-}
-
-- (IBAction)sendSMS:(id)sender {
-    MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc]init];
-    picker.messageComposeDelegate = self;
-    [picker setBody:@"This is a dummy mail"];
-    [self presentModalViewController:picker animated:YES];
-    
-}
 
 @end

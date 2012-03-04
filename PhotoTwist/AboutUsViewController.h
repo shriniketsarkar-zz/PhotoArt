@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
-#import <MessageUI/MFMessageComposeViewController.h>
 
-@interface AboutUsViewController : UIViewController<MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
-- (IBAction)sendEmail:(id)sender;
-- (IBAction)sendSMS:(id)sender;
+@interface AboutUsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewAboutUS;
 -(void)runAnimation;
 @end

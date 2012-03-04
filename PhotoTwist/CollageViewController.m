@@ -9,6 +9,8 @@
 #import "CollageViewController.h"
 #import "ELCAlbumPickerController.h"
 #import "PhotoTwistAppDelegate.h"
+#import "SVProgressHUD.h"
+
 @implementation CollageViewController
 @synthesize btnCollageCapture;
 @synthesize btnCollageCancel;
@@ -80,19 +82,10 @@
     self.isImageViewInMotionAlready = NO;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-
-    }
-    return self;
-}
 -(void)viewDidLoad
 {
-    UIColor *backgroundColor = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"PhotoArtBase.png"]];
-    self.view.backgroundColor = backgroundColor;
+
+    
     //Setting the slider verticle.
     sliderVertical.transform = CGAffineTransformRotate(sliderVertical.transform, 90.0/180*M_PI);
     [sliderVertical setFrame:CGRectMake(10, 50, 10, 350)];
@@ -103,7 +96,7 @@
     sliderVertical.Hidden = YES;
     
     
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication] delegate];
     if (!appDelegate.retainStateOfCollage)
         [self invokeImagePicker];
 }
@@ -115,19 +108,19 @@
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(capturedImage, nil, nil, nil);
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
     appDelegate.retainStateOfCollage = NO;
 }
 
 - (IBAction)dismissCollageView:(id)sender {
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
     appDelegate.retainStateOfCollage = NO;
 //    [self dismissModalViewControllerAnimated:YES];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)goBackRetainingView:(id)sender {
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.retainStateOfCollage = YES;
 }
 -(void)invokeImagePicker
@@ -206,8 +199,10 @@
 #pragma mark - View lifecycle
 -(void) viewDidAppear:(BOOL)animated
 {
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
     appDelegate.retainStateOfCollage = YES;
+    
+    
     [self customizeCollageViewController];
 }
 
