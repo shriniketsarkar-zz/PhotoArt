@@ -72,28 +72,28 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="R3c-cb-Qfe">
-                                <rect key="frame" x="221" y="43" width="79" height="27"/>
+                                <rect key="frame" x="218" y="289" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchFBOnOff:" destination="805-Kr-j4j" eventType="valueChanged" id="Qss-tZ-46Z"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="Z72-td-6o4">
-                                <rect key="frame" x="26" y="46" width="182" height="21"/>
+                                <rect key="frame" x="23" y="292" width="182" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" enabled="NO" id="GRR-Q7-bjy">
-                                <rect key="frame" x="26" y="115" width="182" height="21"/>
+                                <rect key="frame" x="23" y="373" width="182" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k4z-sR-tJZ">
-                                <rect key="frame" x="224" y="107" width="72" height="37"/>
+                                <rect key="frame" x="221" y="324" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -110,7 +110,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="bQi-BB-A8a"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="PhotoArtSettings_tabbar.png" id="bQi-BB-A8a"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -122,7 +122,308 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-4621" y="-8335"/>
+            <point key="canvasLocation" x="-4621" y="-7245"/>
+        </scene>
+        <scene sceneID="o99-G2-Y1h">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQw-T8-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="U9X-5x-ME7" customClass="MoreViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gmM-0D-pAc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="" id="Ewb-vw-JxS">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="e7l-l8-Q8V">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" minimumFontSize="10" id="b4N-bR-zMH">
+                                                    <rect key="frame" x="74" y="10" width="63" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="OtZ-vZ-EZ9">
+                                                    <rect key="frame" x="15" y="5" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="JSI-bJ-Guy" kind="push" id="ybq-mQ-rkD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="dnL-EL-Mg5">
+                                        <rect key="frame" x="0.0" y="51" width="320" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" minimumFontSize="10" id="HQh-Yu-QT7">
+                                                    <rect key="frame" x="74" y="10" width="63" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="5It-Sy-h2A">
+                                                    <rect key="frame" x="15" y="5" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="5N6-wy-3aZ" kind="push" id="7cI-ax-hv1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Invite to PhotoArt" id="VJc-ln-r8E">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2Jz-bd-Nof">
+                                        <rect key="frame" x="0.0" y="138" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by SMS" lineBreakMode="tailTruncation" minimumFontSize="10" id="vvc-nA-qWe">
+                                                    <rect key="frame" x="74" y="14" width="106" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="QBN-Lw-i8A">
+                                                    <rect key="frame" x="14" y="7" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="LVT-2k-7RR" kind="push" id="Xbh-uX-MUg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S7P-KE-LaN">
+                                        <rect key="frame" x="0.0" y="183" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share on Facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="IJR-Ta-Iy6">
+                                                    <rect key="frame" x="74" y="14" width="149" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="Qef-eZ-ToV">
+                                                    <rect key="frame" x="14" y="7" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="OFn-F0-hpS" kind="push" id="FcL-wc-LSL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gsk-b0-P5W">
+                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tweet about PhotoArt" lineBreakMode="tailTruncation" minimumFontSize="10" id="AEJ-c3-do4">
+                                                    <rect key="frame" x="74" y="14" width="167" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="8aO-RN-oz8">
+                                                    <rect key="frame" x="14" y="4" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Z4l-Ab-tqe" kind="push" id="rtf-bF-vfM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ys4-Ba-4GV">
+                                        <rect key="frame" x="0.0" y="271" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by EMail" lineBreakMode="tailTruncation" minimumFontSize="10" id="XYH-qM-6zO">
+                                                    <rect key="frame" x="74" y="14" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtSettings_tabbar.png" id="WcB-jP-ldF">
+                                                    <rect key="frame" x="14" y="7" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="gSt-Rm-wdc" kind="push" id="B0j-AY-9PF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="More" id="IoQ-eb-rfm"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-4270" y="-8335"/>
+        </scene>
+        <scene sceneID="veC-cM-gQB">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ9-DJ-zYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="LVT-2k-7RR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mwg-4R-JLk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="jEJ-Pa-X7W">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qlW-ug-hcw"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3886" y="-8168"/>
+        </scene>
+        <scene sceneID="PAI-Tm-PQ0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5N4-sg-KOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="OFn-F0-hpS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5HN-Dw-JWb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="S06-Vj-Kmf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qKu-FD-m4S"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3490" y="-8172"/>
+        </scene>
+        <scene sceneID="PHY-9g-y6Y">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eal-CR-sgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Z4l-Ab-tqe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iHe-bq-YcT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="flq-Fd-I2Z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u0o-gd-oIk"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3114" y="-8172"/>
+        </scene>
+        <scene sceneID="Sqe-pr-uxr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BU7-P0-bpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gSt-Rm-wdc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hob-0j-8RB">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="F0o-gH-Fnp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P4p-yY-k5i"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2726" y="-8176"/>
+        </scene>
+        <scene sceneID="Rdc-1s-Yln">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SX-yb-1ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="JSI-bJ-Guy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="doO-WM-yIk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase_About.jpg" id="T1V-IP-lni">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="AId-I2-Jq3"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3882" y="-8804"/>
+        </scene>
+        <scene sceneID="4x5-i2-B6l">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cal-gg-8DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5N6-wy-3aZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9iT-a2-OTf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="BAI-eH-9Hh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="TBR-YV-Z5h"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3486" y="-8804"/>
         </scene>
         <scene sceneID="ja4-91-AEV">
             <objects>
@@ -332,7 +633,7 @@
                     <navigationItem key="navigationItem" id="MPy-Wb-FEe"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bwt-ck-HO9">
@@ -344,7 +645,7 @@
                         <segue destination="eT4-md-4Sd" kind="relationship" relationship="viewControllers" id="hAD-8o-skH"/>
                         <segue destination="dNs-Vc-Z3x" kind="relationship" relationship="viewControllers" id="HUe-Bl-wND"/>
                         <segue destination="R7M-I7-xGl" kind="relationship" relationship="viewControllers" id="Vim-gG-kfg"/>
-                        <segue destination="805-Kr-j4j" kind="relationship" relationship="viewControllers" id="MnX-ip-Ao1"/>
+                        <segue destination="8zf-yW-qr9" kind="relationship" relationship="viewControllers" id="oJ7-T4-aGF"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -396,10 +697,35 @@
             </objects>
             <point key="canvasLocation" x="-5116" y="-8335"/>
         </scene>
+        <scene sceneID="DW9-Pn-3po">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flY-Fz-5XT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="8zf-yW-qr9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" id="d5c-2Y-1lB"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="8eP-PQ-aqD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U9X-5x-ME7" kind="relationship" relationship="rootViewController" id="Hc0-Kg-9fm"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-4719" y="-8335"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Overlay.png" width="72" height="72"/>
         <image name="PhotoArtBase.png" width="320" height="480"/>
+        <image name="PhotoArtBase_About.jpg" width="320" height="480"/>
+        <image name="PhotoArtSettings_tabbar.png" width="30" height="30"/>
         <image name="SplashScreen_PhotoTwist.jpg" width="1808" height="2195"/>
     </resources>
     <classes>
@@ -457,6 +783,9 @@
                 <relationship kind="outlet" name="loginDialogView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="loginStatusLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="MoreViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
         </class>
         <class className="PhotoTwistTabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoTwistTabBarController.h"/>

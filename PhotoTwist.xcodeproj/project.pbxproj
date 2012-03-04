@@ -26,6 +26,7 @@
 		ED65796E14F988FC0099C01A /* FBFunLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED65796C14F988FC0099C01A /* FBFunLoginDialog.m */; };
 		ED65796F14F988FC0099C01A /* FBFunLoginDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED65796D14F988FC0099C01A /* FBFunLoginDialog.xib */; };
 		ED65797514F98BB00099C01A /* FBFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED65797414F98BB00099C01A /* FBFunViewController.m */; };
+		ED6B4E4A1502FBC700587017 /* PhotoArtBase_About.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6B4E491502FBC700587017 /* PhotoArtBase_About.jpg */; };
 		ED7154B514F317AF00C336AA /* StandingCollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7154B414F317AF00C336AA /* StandingCollageViewController.m */; };
 		ED83D82314EFFA12005AA1A8 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81A14EFFA12005AA1A8 /* ELCAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED83D82414EFFA12005AA1A8 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81C14EFFA12005AA1A8 /* ELCAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -57,6 +58,8 @@
 		EDB3E85F14E6394A007610C2 /* SplashScreen_PhotoTwist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDB3E85E14E6394A007610C2 /* SplashScreen_PhotoTwist.jpg */; };
 		EDB3E86114E63CFE007610C2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB3E86014E63CFE007610C2 /* MessageUI.framework */; };
 		EDFC919014E645A80012260A /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFC918F14E645A80012260A /* AboutUsViewController.m */; };
+		EDFF9CD015018D2A0084C68A /* PhotoArtSettings_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFF9CCF15018D2A0084C68A /* PhotoArtSettings_tabbar.png */; };
+		EDFF9CD415029A1E0084C68A /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDFF9CD315029A1E0084C68A /* MoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,7 @@
 		ED65796D14F988FC0099C01A /* FBFunLoginDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBFunLoginDialog.xib; sourceTree = "<group>"; };
 		ED65797314F98BB00099C01A /* FBFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFunViewController.h; sourceTree = "<group>"; };
 		ED65797414F98BB00099C01A /* FBFunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFunViewController.m; sourceTree = "<group>"; };
+		ED6B4E491502FBC700587017 /* PhotoArtBase_About.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase_About.jpg; sourceTree = "<group>"; };
 		ED7154B314F317AF00C336AA /* StandingCollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingCollageViewController.h; sourceTree = "<group>"; };
 		ED7154B414F317AF00C336AA /* StandingCollageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingCollageViewController.m; sourceTree = "<group>"; };
 		ED83D81914EFFA12005AA1A8 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
@@ -139,6 +143,9 @@
 		EDB3E86014E63CFE007610C2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EDFC918E14E645A80012260A /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		EDFC918F14E645A80012260A /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		EDFF9CCF15018D2A0084C68A /* PhotoArtSettings_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PhotoArtSettings_tabbar.png; sourceTree = "<group>"; };
+		EDFF9CD215029A1E0084C68A /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		EDFF9CD315029A1E0084C68A /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +178,8 @@
 		ED0D051714FDB5DD00B3D3F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				ED6B4E491502FBC700587017 /* PhotoArtBase_About.jpg */,
+				EDFF9CCF15018D2A0084C68A /* PhotoArtSettings_tabbar.png */,
 				ED384E5214FEBC5100289BD9 /* PhotoArtBase1.jpg */,
 				ED384E5314FEBC5100289BD9 /* PhotoArtBase2.jpg */,
 				ED384E5414FEBC5100289BD9 /* PhotoArtBase3.jpg */,
@@ -279,7 +288,7 @@
 				EDA8DA7914F1F652009FCC89 /* CameraControllers */,
 				ED83D81714EFF9AF005AA1A8 /* ELC Image Picker */,
 				EDFC919114E70D300012260A /* PhotoArt */,
-				EDB3E86214E63F63007610C2 /* AboutUs */,
+				EDB3E86214E63F63007610C2 /* More */,
 				EDB3E85E14E6394A007610C2 /* SplashScreen_PhotoTwist.jpg */,
 				EDB3E83514E634E4007610C2 /* PhotoTwistAppDelegate.h */,
 				EDB3E83614E634E4007610C2 /* PhotoTwistAppDelegate.m */,
@@ -321,13 +330,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EDB3E86214E63F63007610C2 /* AboutUs */ = {
+		EDB3E86214E63F63007610C2 /* More */ = {
 			isa = PBXGroup;
 			children = (
 				EDFC918E14E645A80012260A /* AboutUsViewController.h */,
 				EDFC918F14E645A80012260A /* AboutUsViewController.m */,
+				EDFF9CD215029A1E0084C68A /* MoreViewController.h */,
+				EDFF9CD315029A1E0084C68A /* MoreViewController.m */,
 			);
-			name = AboutUs;
+			name = More;
 			sourceTree = "<group>";
 		};
 		EDC5314C14F8A0E300FDEE6F /* FaceBookIntegration */ = {
@@ -449,6 +460,8 @@
 				ED384E6714FEBC5100289BD9 /* PhotoArtBase10.jpg in Resources */,
 				ED384E6814FEBC5100289BD9 /* PhotoArtBase11.jpg in Resources */,
 				ED384E6914FEBC5100289BD9 /* PhotoArtBase12.jpg in Resources */,
+				EDFF9CD015018D2A0084C68A /* PhotoArtSettings_tabbar.png in Resources */,
+				ED6B4E4A1502FBC700587017 /* PhotoArtBase_About.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +512,7 @@
 				ED65796E14F988FC0099C01A /* FBFunLoginDialog.m in Sources */,
 				ED65797514F98BB00099C01A /* FBFunViewController.m in Sources */,
 				ED384E5014FE989200289BD9 /* PhotoTwistTabBarController.m in Sources */,
+				EDFF9CD415029A1E0084C68A /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
