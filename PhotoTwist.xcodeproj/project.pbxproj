@@ -27,6 +27,8 @@
 		ED65796F14F988FC0099C01A /* FBFunLoginDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED65796D14F988FC0099C01A /* FBFunLoginDialog.xib */; };
 		ED65797514F98BB00099C01A /* FBFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED65797414F98BB00099C01A /* FBFunViewController.m */; };
 		ED6B4E4A1502FBC700587017 /* PhotoArtBase_About.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6B4E491502FBC700587017 /* PhotoArtBase_About.jpg */; };
+		ED6B4E81150306D900587017 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B4E7E150306CD00587017 /* Twitter.framework */; };
+		ED6B4E85150309F400587017 /* TwitterIntegrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6B4E84150309F400587017 /* TwitterIntegrationViewController.m */; };
 		ED7154B514F317AF00C336AA /* StandingCollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7154B414F317AF00C336AA /* StandingCollageViewController.m */; };
 		ED83D82314EFFA12005AA1A8 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81A14EFFA12005AA1A8 /* ELCAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED83D82414EFFA12005AA1A8 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81C14EFFA12005AA1A8 /* ELCAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -97,6 +99,9 @@
 		ED65797314F98BB00099C01A /* FBFunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFunViewController.h; sourceTree = "<group>"; };
 		ED65797414F98BB00099C01A /* FBFunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFunViewController.m; sourceTree = "<group>"; };
 		ED6B4E491502FBC700587017 /* PhotoArtBase_About.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhotoArtBase_About.jpg; sourceTree = "<group>"; };
+		ED6B4E7E150306CD00587017 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		ED6B4E83150309F400587017 /* TwitterIntegrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterIntegrationViewController.h; sourceTree = "<group>"; };
+		ED6B4E84150309F400587017 /* TwitterIntegrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterIntegrationViewController.m; sourceTree = "<group>"; };
 		ED7154B314F317AF00C336AA /* StandingCollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingCollageViewController.h; sourceTree = "<group>"; };
 		ED7154B414F317AF00C336AA /* StandingCollageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingCollageViewController.m; sourceTree = "<group>"; };
 		ED83D81914EFFA12005AA1A8 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6B4E81150306D900587017 /* Twitter.framework in Frameworks */,
 				EDA8DA8614F20FD0009FCC89 /* QuartzCore.framework in Frameworks */,
 				ED83D83414EFFBB1005AA1A8 /* AssetsLibrary.framework in Frameworks */,
 				EDB3E86114E63CFE007610C2 /* MessageUI.framework in Frameworks */,
@@ -205,6 +211,15 @@
 				ED65795C14F95FF90099C01A /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		ED6B4E82150309C000587017 /* TwitterIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				ED6B4E83150309F400587017 /* TwitterIntegrationViewController.h */,
+				ED6B4E84150309F400587017 /* TwitterIntegrationViewController.m */,
+			);
+			name = TwitterIntegration;
 			sourceTree = "<group>";
 		};
 		ED83D81714EFF9AF005AA1A8 /* ELC Image Picker */ = {
@@ -268,6 +283,7 @@
 		EDB3E82514E634E4007610C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED6B4E7E150306CD00587017 /* Twitter.framework */,
 				EDA8DA8514F20FD0009FCC89 /* QuartzCore.framework */,
 				ED83D83314EFFBB1005AA1A8 /* AssetsLibrary.framework */,
 				EDB3E86014E63CFE007610C2 /* MessageUI.framework */,
@@ -282,6 +298,7 @@
 		EDB3E82C14E634E4007610C2 /* PhotoTwist */ = {
 			isa = PBXGroup;
 			children = (
+				ED6B4E82150309C000587017 /* TwitterIntegration */,
 				ED0D051714FDB5DD00B3D3F1 /* Images */,
 				ED65795914F95FF90099C01A /* SVProgressHUD */,
 				EDC5314C14F8A0E300FDEE6F /* FaceBookIntegration */,
@@ -513,6 +530,7 @@
 				ED65797514F98BB00099C01A /* FBFunViewController.m in Sources */,
 				ED384E5014FE989200289BD9 /* PhotoTwistTabBarController.m in Sources */,
 				EDFF9CD415029A1E0084C68A /* MoreViewController.m in Sources */,
+				ED6B4E85150309F400587017 /* TwitterIntegrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

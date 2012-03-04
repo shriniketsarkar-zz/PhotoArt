@@ -143,7 +143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About" lineBreakMode="tailTruncation" minimumFontSize="10" id="b4N-bR-zMH">
-                                                    <rect key="frame" x="74" y="10" width="63" height="21"/>
+                                                    <rect key="frame" x="74" y="9" width="63" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -169,7 +169,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" minimumFontSize="10" id="HQh-Yu-QT7">
-                                                    <rect key="frame" x="74" y="10" width="63" height="21"/>
+                                                    <rect key="frame" x="74" y="9" width="63" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,7 +199,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by SMS" lineBreakMode="tailTruncation" minimumFontSize="10" id="vvc-nA-qWe">
-                                                    <rect key="frame" x="74" y="14" width="106" height="21"/>
+                                                    <rect key="frame" x="74" y="11" width="106" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -225,7 +225,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share on Facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="IJR-Ta-Iy6">
-                                                    <rect key="frame" x="74" y="14" width="149" height="21"/>
+                                                    <rect key="frame" x="74" y="11" width="149" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -251,7 +251,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tweet about PhotoArt" lineBreakMode="tailTruncation" minimumFontSize="10" id="AEJ-c3-do4">
-                                                    <rect key="frame" x="74" y="14" width="167" height="21"/>
+                                                    <rect key="frame" x="74" y="11" width="167" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -266,7 +266,7 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="Z4l-Ab-tqe" kind="push" id="rtf-bF-vfM"/>
+                                            <segue destination="ZuW-kL-8xR" kind="push" id="QdH-rI-AqI"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ys4-Ba-4GV">
@@ -277,7 +277,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by EMail" lineBreakMode="tailTruncation" minimumFontSize="10" id="XYH-qM-6zO">
-                                                    <rect key="frame" x="74" y="14" width="111" height="21"/>
+                                                    <rect key="frame" x="74" y="11" width="111" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -345,26 +345,6 @@
             </objects>
             <point key="canvasLocation" x="-3490" y="-8172"/>
         </scene>
-        <scene sceneID="PHY-9g-y6Y">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Eal-CR-sgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Z4l-Ab-tqe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iHe-bq-YcT">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="flq-Fd-I2Z">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="u0o-gd-oIk"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-3114" y="-8172"/>
-        </scene>
         <scene sceneID="Sqe-pr-uxr">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BU7-P0-bpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,7 +363,7 @@
                     <navigationItem key="navigationItem" id="P4p-yY-k5i"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2726" y="-8176"/>
+            <point key="canvasLocation" x="-2774" y="-8172"/>
         </scene>
         <scene sceneID="Rdc-1s-Yln">
             <objects>
@@ -720,6 +700,26 @@
             </objects>
             <point key="canvasLocation" x="-4719" y="-8335"/>
         </scene>
+        <scene sceneID="I7V-Q6-knu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wme-Jj-C4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ZuW-kL-8xR" customClass="TwitterIntegrationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jkl-pD-HnN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="n30-2S-E87">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ny7-z5-7K4"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-3132" y="-8172"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Overlay.png" width="72" height="72"/>
@@ -798,6 +798,9 @@
                 <relationship kind="outlet" name="collageToolBar" candidateClass="UIToolbar"/>
                 <relationship kind="outlet" name="imageViewLastCollage" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="TwitterIntegrationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterIntegrationViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
