@@ -7,7 +7,6 @@
 //
 
 #import "CollageViewController.h"
-#import "ELCAlbumPickerController.h"
 #import "PhotoTwistAppDelegate.h"
 #import "SVProgressHUD.h"
 
@@ -94,11 +93,9 @@
     sliderVertical.maximumValue = 1.1;
     sliderVertical.continuous = YES;
     sliderVertical.Hidden = YES;
-    
-    
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if (!appDelegate.retainStateOfCollage)
-        [self invokeImagePicker];
+
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegate.retainStateOfCollage = YES;
 }
 
 - (IBAction)captureScreenImage:(id)sender 
@@ -113,56 +110,7 @@
 }
 
 - (IBAction)dismissCollageView:(id)sender {
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
-    appDelegate.retainStateOfCollage = NO;
-//    [self dismissModalViewControllerAnimated:YES];
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)goBackRetainingView:(id)sender {
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.retainStateOfCollage = YES;
-}
--(void)invokeImagePicker
-{
-    ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
-    ELCImagePickerController *elcPicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
-    [albumController setParent:elcPicker];
-    elcPicker.delegate = self;
-    [self presentModalViewController:elcPicker animated:NO];    
-}
-#pragma mark ELCImagePickerControllerDelegate Methods
-
-- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info 
-{
-        //Dismiss the picker.
-	[self dismissModalViewControllerAnimated:YES];
-    //Prepare the view with the images.
-    NSInteger counter = 101;    //referes to the indentifiers.
-
-    if ([info count] < 12) 
-    {
-        for (NSInteger i=counter+[info count]; i<=112; i++) 
-        {
-            UIImageView *imageView = (UIImageView*)[self.view viewWithTag:i];
-            imageView.hidden = YES;
-        }
-    }
-    for(NSDictionary *dict in info) 
-    {
-        if (counter >= 101 && counter <=112) 
-        {
-            UIImageView *imageView = (UIImageView *)[self.view viewWithTag:counter];
-            imageView.image = [dict objectForKey:UIImagePickerControllerOriginalImage];
-            counter+=1;
-        }
-    }
-    [self customizeCollageViewController];
-}
-
-- (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker {
-    
-	[self dismissModalViewControllerAnimated:YES];
 }
 
 -(void)customizeCollageViewController
@@ -199,10 +147,10 @@
 #pragma mark - View lifecycle
 -(void) viewDidAppear:(BOOL)animated
 {
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
-    appDelegate.retainStateOfCollage = YES;
-    
-    
+//    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+//    appDelegate.retainStateOfCollage = YES;
+//    
+//    
     [self customizeCollageViewController];
 }
 

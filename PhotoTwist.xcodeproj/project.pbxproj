@@ -32,6 +32,7 @@
 		ED6B4EA215033DAA00587017 /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ED6B4EA115033DAA00587017 /* f_logo.png */; };
 		ED6B4EB51504171500587017 /* MailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6B4EB41504171500587017 /* MailViewController.m */; };
 		ED6B4EB81504172300587017 /* SMSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6B4EB71504172300587017 /* SMSViewController.m */; };
+		ED6B4EBB1504232000587017 /* RetainState.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6B4EBA1504232000587017 /* RetainState.m */; };
 		ED7154B514F317AF00C336AA /* StandingCollageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7154B414F317AF00C336AA /* StandingCollageViewController.m */; };
 		ED83D82314EFFA12005AA1A8 /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81A14EFFA12005AA1A8 /* ELCAlbumPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED83D82414EFFA12005AA1A8 /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = ED83D81C14EFFA12005AA1A8 /* ELCAsset.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -122,6 +123,8 @@
 		ED6B4EB41504171500587017 /* MailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailViewController.m; sourceTree = "<group>"; };
 		ED6B4EB61504172300587017 /* SMSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSViewController.h; sourceTree = "<group>"; };
 		ED6B4EB71504172300587017 /* SMSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSViewController.m; sourceTree = "<group>"; };
+		ED6B4EB91504232000587017 /* RetainState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainState.h; sourceTree = "<group>"; };
+		ED6B4EBA1504232000587017 /* RetainState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainState.m; sourceTree = "<group>"; };
 		ED7154B314F317AF00C336AA /* StandingCollageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingCollageViewController.h; sourceTree = "<group>"; };
 		ED7154B414F317AF00C336AA /* StandingCollageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingCollageViewController.m; sourceTree = "<group>"; };
 		ED83D81914EFFA12005AA1A8 /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				ED83D84114EFFF04005AA1A8 /* EffectsViewController.m */,
 				ED7154B314F317AF00C336AA /* StandingCollageViewController.h */,
 				ED7154B414F317AF00C336AA /* StandingCollageViewController.m */,
+				ED6B4EB91504232000587017 /* RetainState.h */,
+				ED6B4EBA1504232000587017 /* RetainState.m */,
 			);
 			name = PhotoArt;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				ED6B4EA015033D1E00587017 /* SettingsViewController.m in Sources */,
 				ED6B4EB51504171500587017 /* MailViewController.m in Sources */,
 				ED6B4EB81504172300587017 /* SMSViewController.m in Sources */,
+				ED6B4EBB1504232000587017 /* RetainState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

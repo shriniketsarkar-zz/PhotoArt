@@ -15,7 +15,9 @@
     SettingsViewController *settingsVC;
     bool retainStateOfCollage;
     bool displayFBLoginUnavailableAlert;
+    NSArray *selectedImagesForCollage;
 }
+@property (nonatomic, retain) NSArray *selectedImagesForCollage;
 @property (nonatomic,retain) Facebook *facebook;
 @property (nonatomic,retain) SettingsViewController *settingsVC;
 @property (strong, nonatomic)  UIWindow *window;

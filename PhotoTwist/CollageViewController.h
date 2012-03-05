@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "ELCImagePickerController.h"
-@interface CollageViewController : UIViewController<ELCImagePickerControllerDelegate>
+
+@interface CollageViewController : UIViewController
 {
     bool isImageViewInMotionAlready;
     NSInteger *imageViewBeingDragged;
@@ -40,7 +40,6 @@
 
 - (IBAction)dismissCollageView:(id)sender;
 
-- (IBAction)goBackRetainingView:(id)sender;
 
 -(void)customizeCollageViewController;
 

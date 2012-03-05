@@ -17,6 +17,7 @@
 @synthesize tabBarPhotoTwist = _tabBarPhotoTwist;
 @synthesize settingsVC = _settingsVC;
 @synthesize facebook;
+@synthesize selectedImagesForCollage = _selectedImagesForCollage;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

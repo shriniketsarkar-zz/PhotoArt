@@ -8,29 +8,22 @@
 
 #import "StandingCollageViewController.h"
 #import "PhotoTwistAppDelegate.h"
+#import "SVProgressHUD.h"
 @implementation StandingCollageViewController
 
 @synthesize imageViewLastCollage;
-@synthesize btnResumeCollage;
+
 @synthesize btnNewCollage;
 @synthesize collageToolBar;
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    //Check if Collage is in Progress.
-    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //[collageToolBar setUserInteractionEnabled:YES];
 
-    if(appDelegate.retainStateOfCollage)
-    {
-        btnResumeCollage.enabled = YES;
-        btnNewCollage.enabled = NO;
-    }
-    else
-    {
-        btnResumeCollage.enabled = NO;
-        btnNewCollage.enabled = YES;
-    }
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSLog(@"I Appeared. = %@",appDelegate.retainStateOfCollage);
+    if (appDelegate.retainStateOfCollage)
+        self.navigationController.toolbar.hidden = YES;
+    
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,7 +64,6 @@
     [self setImageViewLastCollage:nil];
 
     [self setBtnNewCollage:nil];
-    [self setBtnResumeCollage:nil];
     [self setCollageToolBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -83,19 +75,60 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-//- (IBAction)loadNewCollage:(id)sender 
-//{
-//    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-//        appDelegate.retainStateOfCollage = NO;
-//    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
-//    [self.navigationController pushViewController:collageViewController animated:YES];
-//
-//}
-//- (IBAction)resumeExistingCollage:(id)sender 
-//{
-//    PhotoTwistAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-//        appDelegate.retainStateOfCollage = YES;
-//    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
-//        [self.navigationController pushViewController:collageViewController animated:YES];
-//}
+-(void)invokeImagePicker
+{
+    ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
+    ELCImagePickerController *elcPicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
+    [albumController setParent:elcPicker];
+    elcPicker.delegate = self;
+    [self presentModalViewController:elcPicker animated:YES];    
+}
+
+
+- (IBAction)loadNewCollage:(id)sender 
+{
+    [self invokeImagePicker];
+}
+#pragma mark ELCImagePickerControllerDelegate Methods
+
+- (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info 
+{
+    //Dismiss the picker.
+	[self dismissModalViewControllerAnimated:YES];
+    
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegate.selectedImagesForCollage = info;
+    //NSLog(@"The Array has: %@",appDelegate.selectedImagesForCollage);
+    
+    UIViewController *collageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"collageVC"];
+    
+    
+    //Prepare the view with the images.
+    NSInteger counter = 101;    //Reffers to the imageView indentifiers.
+    
+    if ([appDelegate.selectedImagesForCollage count] < 12) 
+    {
+        for (NSInteger i=counter+[appDelegate.selectedImagesForCollage count]; i<=112; i++) 
+        {
+            UIImageView *imageView = (UIImageView*)[collageViewController.view viewWithTag:i];
+            imageView.hidden = YES;
+        }
+    }
+    for(NSDictionary *dict in appDelegate.selectedImagesForCollage) 
+    {
+        if (counter >= 101 && counter <=112) 
+        {
+            UIImageView *imageView = (UIImageView *)[collageViewController.view viewWithTag:counter];
+            imageView.image = [dict objectForKey:UIImagePickerControllerOriginalImage];
+            counter+=1;
+        }
+    }
+    //NSLog(@"Presenting modal VC");
+    [self.navigationController pushViewController:collageViewController animated:YES];
+}
+
+- (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker {
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
 @end

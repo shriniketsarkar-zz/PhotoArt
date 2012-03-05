@@ -41,7 +41,7 @@
 - (void)viewDidLoad
 {
 //    [self.tabBar setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PhotoArtBase.png"]]];
-    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArtBase.png"]];
+    //[self.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArtBase.png"]];
     [super viewDidLoad];
 }
 

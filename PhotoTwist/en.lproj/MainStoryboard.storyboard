@@ -361,24 +361,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="htz-nX-6TI">
-                                <rect key="frame" x="0.0" y="31" width="320" height="400"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="369"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="GGE-pM-VeJ">
+                            <toolbar autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" tag="1001" contentMode="scaleToFill" barStyle="blackTranslucent" id="GGE-pM-VeJ">
                                 <rect key="frame" x="0.0" y="390" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem tag="101" title="New Collage" id="2hu-P0-OL3">
                                         <connections>
-                                            <segue destination="hVh-po-5E9" kind="push" id="1dv-yu-tK7"/>
+                                            <action selector="loadNewCollage:" destination="7s1-GS-yVn" id="uOl-Xl-T0f"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ywM-5f-ZDO"/>
-                                    <barButtonItem tag="102" title="Resume" id="wPh-ok-LgZ">
-                                        <connections>
-                                            <segue destination="hVh-po-5E9" kind="push" id="Vmw-UD-MoE"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="PickFrame" id="lan-yC-Bhc"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -391,7 +386,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="btnNewCollage" destination="2hu-P0-OL3" id="tIB-Fp-EZP"/>
-                        <outlet property="btnResumeCollage" destination="wPh-ok-LgZ" id="MtA-57-b2T"/>
                         <outlet property="collageToolBar" destination="GGE-pM-VeJ" id="niR-Ym-sNn"/>
                         <outlet property="imageViewLastCollage" destination="htz-nX-6TI" id="jDc-jx-DzK"/>
                     </connections>
@@ -664,7 +658,6 @@
             <relationships>
                 <relationship kind="action" name="captureScreenImage:"/>
                 <relationship kind="action" name="dismissCollageView:"/>
-                <relationship kind="action" name="goBackRetainingView:"/>
                 <relationship kind="action" name="sliderValueChanged:"/>
                 <relationship kind="outlet" name="btnCollageCancel" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="btnCollageCapture" candidateClass="UIBarButtonItem"/>
@@ -715,8 +708,8 @@
         <class className="StandingCollageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StandingCollageViewController.h"/>
             <relationships>
+                <relationship kind="action" name="loadNewCollage:"/>
                 <relationship kind="outlet" name="btnNewCollage" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="btnResumeCollage" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="collageToolBar" candidateClass="UIToolbar"/>
                 <relationship kind="outlet" name="imageViewLastCollage" candidateClass="UIImageView"/>
             </relationships>
@@ -730,7 +723,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Vmw-UD-MoE"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface StandingCollageViewController : UIViewController
+#import "ELCImagePickerController.h"
+#import "ELCAlbumPickerController.h"
+@interface StandingCollageViewController : UIViewController<ELCImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLastCollage;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnResumeCollage;
+
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnNewCollage;
 @property (weak, nonatomic) IBOutlet UIToolbar *collageToolBar;
 //- (IBAction)resumeExistingCollage:(id)sender;
 //
-//- (IBAction)loadNewCollage:(id)sender;
+- (IBAction)loadNewCollage:(id)sender;
 @end
