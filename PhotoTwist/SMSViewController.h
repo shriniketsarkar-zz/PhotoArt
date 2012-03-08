@@ -10,6 +10,6 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 
-@interface SMSViewController : UIViewController<MFMessageComposeViewControllerDelegate>
+@interface SMSViewController : UIViewController<UINavigationControllerDelegate,MFMessageComposeViewControllerDelegate>
 
 @end

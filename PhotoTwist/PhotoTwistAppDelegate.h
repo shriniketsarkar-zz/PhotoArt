@@ -9,19 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "FBConnect.h"
 @class SettingsViewController;
-@interface PhotoTwistAppDelegate : UIResponder <UIApplicationDelegate,FBSessionDelegate>
+@interface PhotoTwistAppDelegate : UIResponder <UIApplicationDelegate,FBSessionDelegate,FBRequestDelegate>
 {
     Facebook *facebook;
-    SettingsViewController *settingsVC;
     bool retainStateOfCollage;
     bool displayFBLoginUnavailableAlert;
     NSArray *selectedImagesForCollage;
 }
 @property (nonatomic, retain) NSArray *selectedImagesForCollage;
 @property (nonatomic,retain) Facebook *facebook;
-@property (nonatomic,retain) SettingsViewController *settingsVC;
+
 @property (strong, nonatomic)  UIWindow *window;
 @property (nonatomic, assign) bool retainStateOfCollage;
 @property (nonatomic, assign) bool displayFBLoginUnavailableAlert;
-@property (weak, nonatomic) IBOutlet UITabBarController *tabBarPhotoTwist;
+-(void)getFacebookUserName;
 @end

@@ -33,7 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+//    [self.navigationController.navigationBar setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"]]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -50,12 +51,23 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+//    UIColor *color = [[UIColor alloc]initWithPatternImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"]];
+//    self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
+    
+//        [self.navigationController.navigationBar setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"]]];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"] forBarMetrics:UIBarMetricsDefault];
+    
+    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_TabBarImage.png"]];
+    
     [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+//    [self.navigationController.navigationBar setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"]]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

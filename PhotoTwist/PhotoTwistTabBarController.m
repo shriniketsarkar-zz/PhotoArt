@@ -35,7 +35,10 @@
 {
 }
 */
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_TabBarImage.png"]];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad

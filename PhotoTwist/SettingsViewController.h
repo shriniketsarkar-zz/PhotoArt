@@ -11,4 +11,6 @@
 @interface SettingsViewController : UITableViewController 
 - (IBAction)facebookConnectSwitchOnOff:(id)sender;
 @property (strong, nonatomic) IBOutlet UISwitch *facebookConnectSwitch;
+@property (strong, nonatomic) IBOutlet UILabel *loginToFacebook;
+-(void)updateFacebookLoginStatus;
 @end

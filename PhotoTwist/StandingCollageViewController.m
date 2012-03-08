@@ -15,24 +15,16 @@
 
 @synthesize btnNewCollage;
 @synthesize collageToolBar;
-
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
-    NSLog(@"I Appeared. = %@",appDelegate.retainStateOfCollage);
-    if (appDelegate.retainStateOfCollage)
-        self.navigationController.toolbar.hidden = YES;
     
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"] forBarMetrics:UIBarMetricsDefault];
+    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_TabBarImage.png"]];
+    [imageViewLastCollage.layer setBorderWidth:2];
+    [imageViewLastCollage.layer setBorderColor:[[UIColor blackColor]CGColor]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"PhotoArtBase.png"]]];
 }
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,13 +43,14 @@
 }
 */
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
 }
-*/
+
 
 - (void)viewDidUnload
 {
@@ -123,7 +116,6 @@
             counter+=1;
         }
     }
-    //NSLog(@"Presenting modal VC");
     [self.navigationController pushViewController:collageViewController animated:YES];
 }
 

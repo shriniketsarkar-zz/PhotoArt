@@ -9,13 +9,18 @@
 #import "PhotoTwistAppDelegate.h"
 #import "SettingsViewController.h"
 #import "SVProgressHUD.h"
+#import "ASIHTTPRequest.h"
+#import "JSON.h"
+#import "SettingsViewController.h"
+#import "MoreViewController.h"
+
+
 @implementation PhotoTwistAppDelegate
 
 @synthesize window = _window;
 @synthesize retainStateOfCollage=_retainStateOfCollage;
 @synthesize displayFBLoginUnavailableAlert = _displayFBLoginUnavailableAlert;
-@synthesize tabBarPhotoTwist = _tabBarPhotoTwist;
-@synthesize settingsVC = _settingsVC;
+
 @synthesize facebook;
 @synthesize selectedImagesForCollage = _selectedImagesForCollage;
 
@@ -47,14 +52,14 @@
 }
 // Pre 4.2 support
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    NSLog(@"URL 4.2 = %@",url);
+    //NSLog(@"URL 4.2 = %@",url);
     return [facebook handleOpenURL:url]; 
 }
 
 // For 4.2+ support
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-        NSLog(@"URL 4.2+ = %@",url);
+        //NSLog(@"URL 4.2+ = %@",url);
     return [facebook handleOpenURL:url]; 
 }
 - (void)fbDidLogin 
@@ -63,7 +68,7 @@
     [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
-    
+    [self getFacebookUserName];
 }
 - (void) fbDidLogout 
 {
@@ -72,9 +77,60 @@
     if ([defaults objectForKey:@"FBAccessTokenKey"]) {
         [defaults removeObjectForKey:@"FBAccessTokenKey"];
         [defaults removeObjectForKey:@"FBExpirationDateKey"];
+        [defaults removeObjectForKey:@"FBUserName"];
         [defaults synchronize];
     }
 }
+-(void)getFacebookUserName
+{
+    NSString *urlString = [NSString stringWithFormat:@"https://graph.facebook.com/me?access_token=%@", 
+                           [facebook.accessToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:urlString];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDidFinishSelector:@selector(getFacebookUserNameFinished:)];
+    
+    [request setDelegate:self];
+    [request startAsynchronous];
+}
+- (void)getFacebookUserNameFinished:(ASIHTTPRequest *)request
+{
+    // Use when fetching text data
+    NSString *responseString = [request responseString];
+    NSLog(@"Got Facebook Profile: %@", responseString);
+    
+    NSMutableDictionary *responseJSON = [responseString JSONValue];   
+    
+
+    NSString *firstName = [responseJSON objectForKey:@"first_name"];
+    NSString *lastName = [responseJSON objectForKey:@"last_name"];
+    if (firstName && lastName) 
+    {
+        NSString *fbUserName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:fbUserName forKey:@"FBUserName"];
+    }
+//    NSLog(@"The TABS: %@",self.window.rootViewController.tabBarController.vi);
+    for (UIViewController *vc in self.window.rootViewController.tabBarController.viewControllers)
+    {
+        if ([vc isKindOfClass:[MoreViewController class]]) 
+        {
+            MoreViewController *moreVC = (MoreViewController *)vc;
+            NSLog(@"MOREVC NAV: %@",moreVC.navigationController.viewControllers);
+            for (UIViewController *v in moreVC.navigationController.viewControllers)
+            {
+                if ([v isKindOfClass:[SettingsViewController class]])
+                {
+                    SettingsViewController *settingsVC = (SettingsViewController *)v;
+                    if ([settingsVC respondsToSelector:@selector(updateFacebookLoginStatus)]) 
+                    {
+                            [settingsVC updateFacebookLoginStatus];
+                    }
+                }
+            }
+        }
+    }
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
@@ -104,12 +160,7 @@
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 }
-//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url 
-//{
-//    NSLog(@"URL: %@",url);
-//    return [_settingsVC.facebook handleOpenURL:url]; 
-//
-//}
+
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     /*

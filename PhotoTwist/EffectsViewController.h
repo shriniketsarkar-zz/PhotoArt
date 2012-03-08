@@ -8,11 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EffectsViewController : UIViewController
+@interface EffectsViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray * frameImagesArray;
+}
+@property (nonatomic,retain) NSArray * frameImagesArray;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEffectsVC;
 - (IBAction)btnNegateImage:(id)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnGrayImage;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btnNegative;
+- (IBAction)postToFB:(id)sender;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolBarTop;
+@property (strong, nonatomic) IBOutlet UIToolbar *toolBarBottom;
+- (IBAction)btnFramesClicked:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableViewEffects;
 - (IBAction)btnGrayImage:(id)sender;
+- (IBAction)postImageToFacebook:(id)sender;
 @end

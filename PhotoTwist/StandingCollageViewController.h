@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ELCImagePickerController.h"
 #import "ELCAlbumPickerController.h"
+#import <QuartzCore/QuartzCore.h>
 @interface StandingCollageViewController : UIViewController<ELCImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLastCollage;

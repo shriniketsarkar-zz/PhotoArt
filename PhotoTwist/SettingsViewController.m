@@ -12,6 +12,7 @@
 
 @implementation SettingsViewController
 @synthesize facebookConnectSwitch;
+@synthesize loginToFacebook;
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -22,8 +23,7 @@
     {
         appDelegate.facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
         appDelegate.facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
-        if ([appDelegate.facebook isSessionValid]) facebookConnectSwitch.on = YES;
-        else facebookConnectSwitch.on = NO;
+        [self updateFacebookLoginStatus];
     }else
         facebookConnectSwitch.on = NO;
     
@@ -33,13 +33,13 @@
     PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
     if (sender.on) //Log in to FB
     {
-        
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if ([defaults objectForKey:@"FBAccessTokenKey"] 
             && [defaults objectForKey:@"FBExpirationDateKey"]) 
         {
             appDelegate.facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
             appDelegate.facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+            
         }
         if (![appDelegate.facebook isSessionValid]) 
         {
@@ -47,15 +47,30 @@
                                     @"publish_stream", 
                                     nil];
             [appDelegate.facebook authorize:permissions];
-            //[appDelegate.facebook authorize:nil];
         }
     }//End on Sender ON.
     else
         [appDelegate.facebook logout];
 }
-
+-(void)updateFacebookLoginStatus
+{
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *strFBUserName = [defaults objectForKey:@"FBUserName"]; 
+    if ([appDelegate.facebook isSessionValid]) 
+    {
+        facebookConnectSwitch.on = YES;
+        loginToFacebook.text = [strFBUserName stringByAppendingString:@" LoggedIN."];
+    }
+    else
+    {
+        facebookConnectSwitch.on = NO;
+        loginToFacebook.text = @"Login to Facebook";
+    }
+}
 - (void)viewDidUnload {
     [self setFacebookConnectSwitch:nil];
+    [self setLoginToFacebook:nil];
     [super viewDidUnload];
 }
 @end

@@ -31,12 +31,14 @@
         {
             [self.navigationController setNavigationBarHidden:NO animated:YES];
             [self.navigationController setToolbarHidden:NO animated:YES];
+            [[UIApplication sharedApplication] setStatusBarHidden:NO];
            
         }
         else
         {
             [self.navigationController setNavigationBarHidden:YES animated:YES];
             [self.navigationController setToolbarHidden:YES animated:YES];
+            [[UIApplication sharedApplication] setStatusBarHidden:YES];
         }
     }  
 //    }else if (touch.tapCount == 1)
@@ -94,10 +96,13 @@
     sliderVertical.continuous = YES;
     sliderVertical.Hidden = YES;
 
-    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
-    appDelegate.retainStateOfCollage = YES;
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"] forBarMetrics:UIBarMetricsDefault];
+    [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_TabBarImage.png"]];
+    [self customizeCollageViewController];
+}
 - (IBAction)captureScreenImage:(id)sender 
 {
     UIGraphicsBeginImageContext(self.view.bounds.size);
@@ -144,15 +149,6 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
--(void) viewDidAppear:(BOOL)animated
-{
-//    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
-//    appDelegate.retainStateOfCollage = YES;
-//    
-//    
-    [self customizeCollageViewController];
-}
 
 
 - (void)viewDidUnload
