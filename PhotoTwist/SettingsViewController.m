@@ -44,7 +44,7 @@
         if (![appDelegate.facebook isSessionValid]) 
         {
             NSArray *permissions = [[NSArray alloc] initWithObjects:
-                                    @"publish_stream", 
+                                    @"publish_stream",@"user_photos", 
                                     nil];
             [appDelegate.facebook authorize:permissions];
         }

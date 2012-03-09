@@ -46,5 +46,4 @@
 - (IBAction)sliderValueChanged:(id)sender;
 
 
--(void)invokeImagePicker;
 @end

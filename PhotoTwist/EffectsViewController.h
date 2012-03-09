@@ -21,8 +21,9 @@
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBarTop;
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBarBottom;
 - (IBAction)btnFramesClicked:(id)sender;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorFacebookPostProgress;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnPostToFB;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableViewEffects;
 - (IBAction)btnGrayImage:(id)sender;
-- (IBAction)postImageToFacebook:(id)sender;
 @end

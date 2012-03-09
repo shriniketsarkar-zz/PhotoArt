@@ -70,6 +70,18 @@
     [defaults synchronize];
     [self getFacebookUserName];
 }
+-(void)fbDidNotLogin:(BOOL)cancelled
+{
+    
+}
+-(void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt
+{
+    
+}
+-(void)fbSessionInvalidated
+{
+    
+}
 - (void) fbDidLogout 
 {
     // Remove saved authorization information if it exists

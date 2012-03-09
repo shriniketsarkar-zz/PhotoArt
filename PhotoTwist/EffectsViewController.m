@@ -13,6 +13,8 @@
 #import "JSON.h"
 
 @implementation EffectsViewController
+@synthesize activityIndicatorFacebookPostProgress;
+@synthesize btnPostToFB;
 @synthesize tableViewEffects;
 @synthesize btnGrayImage;
 @synthesize btnNegative;
@@ -65,6 +67,8 @@
     [self setToolBarBottom:nil];
 
     [self setTableViewEffects:nil];
+    [self setActivityIndicatorFacebookPostProgress:nil];
+    [self setBtnPostToFB:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -121,11 +125,7 @@
 	}
 }
 
-- (IBAction)postImageToFacebook:(id)sender 
-{
-    NSLog(@"I entered.");
 
-}
 #pragma UIImagePicker methods.
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
@@ -184,7 +184,10 @@
 
 - (IBAction)postToFB:(id)sender 
 {
-    NSString *message = [NSString stringWithFormat:@"Photofrom Art"];
+    btnPostToFB.enabled = NO;
+    activityIndicatorFacebookPostProgress.hidden = NO;
+    [activityIndicatorFacebookPostProgress startAnimating];
+    NSString *message = [NSString stringWithFormat:@"Photo from PhotoArt"];
     UIImage *imageToPost = imageViewEffectsVC.image;
     NSData *imageData = UIImageJPEGRepresentation(imageToPost, 1.0);
         NSURL *url = [NSURL URLWithString:@"https://graph.facebook.com/me/photos"];
@@ -198,6 +201,30 @@
         [request setDelegate:self];
         [request startAsynchronous];
 }
+- (void)sendToPhotosFinished:(ASIHTTPRequest *)request
+{
+    // Use when fetching text data
+    NSString *responseString = [request responseString];
+    
+    NSMutableDictionary *responseJSON = [responseString JSONValue];
+    NSString *photoId = [responseJSON objectForKey:@"id"];
+    NSLog(@"Photo id is: %@", photoId);
+ 
+
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSLog(@"AccessToken Is:%@",appDelegate.facebook.accessToken);
+    NSString *urlString = [NSString stringWithFormat:
+                           @"https://graph.facebook.com/%@?access_token=%@", photoId, 
+                           [appDelegate.facebook.accessToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:urlString];
+    ASIHTTPRequest *newRequest = [ASIHTTPRequest requestWithURL:url];
+    [newRequest setDidFinishSelector:@selector(getFacebookPhotoFinished:)];
+    
+    [newRequest setDelegate:self];
+    NSLog(@"Requested.");
+    [newRequest startAsynchronous];
+    
+}
 - (void)getFacebookPhotoFinished:(ASIHTTPRequest *)request
 {
     NSString *responseString = [request responseString];
@@ -209,5 +236,38 @@
     if (link == nil) return;   
     NSLog(@"Link to photo: %@", link);
     
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSURL *url = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
+    ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
+    [newRequest setPostValue:@"Checkout the photo i created using PhotoArt app!" forKey:@"message"];
+    [newRequest setPostValue:@"A beautiful Snap using PhotoArt" forKey:@"name"];
+    [newRequest setPostValue:@"Amazing app to get Creative with Photos." forKey:@"caption"];
+    [newRequest setPostValue:@"Try it out for free." forKey:@"description"];
+    [newRequest setPostValue:@"http://www.google.com" forKey:@"link"];
+    [newRequest setPostValue:link forKey:@"picture"];
+    [newRequest setPostValue:appDelegate.facebook.accessToken forKey:@"access_token"];
+    [newRequest setDidFinishSelector:@selector(postToWallFinished:)];
+    
+    [newRequest setDelegate:self];
+    [newRequest startAsynchronous];
+    
+}
+- (void)postToWallFinished:(ASIHTTPRequest *)request
+{
+    NSString *responseString = [request responseString];
+    
+    NSMutableDictionary *responseJSON = [responseString JSONValue];
+    NSString *postId = [responseJSON objectForKey:@"id"];
+    NSLog(@"Post id is: %@", postId);
+    [activityIndicatorFacebookPostProgress stopAnimating];
+    UIAlertView *av = [[UIAlertView alloc] 
+                        initWithTitle:@"Sucessfully posted to photos & wall!" 
+                        message:@"Check out your Facebook to see!"
+                        delegate:nil 
+                        cancelButtonTitle:@"OK"
+                        otherButtonTitles:nil];
+	[av show];
+    btnPostToFB.enabled = YES;
+    activityIndicatorFacebookPostProgress.hidden = YES;
 }
 @end
