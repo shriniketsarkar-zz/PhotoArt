@@ -12,12 +12,15 @@
 #import "ELCAssetTablePicker.h"
 #import "ELCAlbumPickerController.h"
 
-@implementation ELCImagePickerController
+#import "PhotoTwistAppDelegate.h"
 
+@implementation ELCImagePickerController
 @synthesize delegate;
 
--(void)cancelImagePicker {
-	if([delegate respondsToSelector:@selector(elcImagePickerControllerDidCancel:)]) {
+-(void)cancelImagePicker 
+{
+	if([delegate respondsToSelector:@selector(elcImagePickerControllerDidCancel:)]) 
+    {
 		[delegate performSelector:@selector(elcImagePickerControllerDidCancel:) withObject:self];
 	}
 }
@@ -60,8 +63,11 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
     NSLog(@"deallocing ELCImagePickerController");
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegate.hasUserSelectedMultipleImages = YES;
     [super dealloc];
 }
 

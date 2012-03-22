@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface CollageViewController : UIViewController
+#import "ImagePickerController.h"
+#import "AlbumPickerController.h"
+
+@interface CollageViewController : UIViewController<ImagePickerControllerDelegate>
 {
     bool isImageViewInMotionAlready;
     NSInteger *imageViewBeingDragged;
@@ -32,18 +35,28 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView11;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView12;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCollageCapture;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnCollageCancel;
-@property (weak, nonatomic) IBOutlet UISlider *sliderVertical;
+
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *btnPostToFaceBook;
+
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorFacebookPostProgress;
+
+
+
+- (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer;
+- (IBAction)handlePinch:(UIPinchGestureRecognizer *)recognizer;
+- (IBAction)handleRotate:(UIRotationGestureRecognizer *)recognizer;
+
+- (IBAction)btnPostToFB:(id)sender;
 
 
 - (IBAction)captureScreenImage:(id)sender;
 
-- (IBAction)dismissCollageView:(id)sender;
+-(UIImage *)captureImageFromScreen;
 
 
 -(void)customizeCollageViewController;
 
-- (IBAction)sliderValueChanged:(id)sender;
-
+//- (IBAction)sliderValueChanged:(id)sender;
 
 @end

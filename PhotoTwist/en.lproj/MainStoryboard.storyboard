@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="40d-EV-dmw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="40d-EV-dmw">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
     </dependencies>
     <scenes>
+        <!--More View Controller - More-->
         <scene sceneID="o99-G2-Y1h">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQw-T8-hoo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -14,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="" id="Ewb-vw-JxS">
+                            <tableViewSection headerTitle="Photo Art" id="Ewb-vw-JxS">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="e7l-l8-Q8V">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="41"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="39"/>
@@ -43,10 +45,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="40" id="dnL-EL-Mg5">
-                                        <rect key="frame" x="0.0" y="51" width="320" height="41"/>
+                                        <rect key="frame" x="0.0" y="87" width="320" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="39"/>
+                                            <rect key="frame" x="10" y="0.0" width="280" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" minimumFontSize="10" id="HQh-Yu-QT7">
@@ -72,11 +74,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Invite to PhotoArt" id="VJc-ln-r8E">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2Jz-bd-Nof">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsShareOnSMS" id="2Jz-bd-Nof">
+                                        <rect key="frame" x="0.0" y="174" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by SMS" lineBreakMode="tailTruncation" minimumFontSize="10" id="vvc-nA-qWe">
@@ -94,15 +96,12 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="LVT-2k-7RR" kind="push" id="Xbh-uX-MUg"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="S7P-KE-LaN">
-                                        <rect key="frame" x="0.0" y="183" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsShareOnFacebook" id="S7P-KE-LaN">
+                                        <rect key="frame" x="0.0" y="219" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share on Facebook" lineBreakMode="tailTruncation" minimumFontSize="10" id="IJR-Ta-Iy6">
@@ -120,15 +119,12 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="OFn-F0-hpS" kind="push" id="FcL-wc-LSL"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gsk-b0-P5W">
-                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsShareOnTweeter" id="gsk-b0-P5W">
+                                        <rect key="frame" x="0.0" y="263" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tweet about PhotoArt" lineBreakMode="tailTruncation" minimumFontSize="10" id="AEJ-c3-do4">
@@ -146,15 +142,12 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="ZuW-kL-8xR" kind="push" id="QdH-rI-AqI"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ys4-Ba-4GV">
-                                        <rect key="frame" x="0.0" y="271" width="320" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsShareOnEmail" id="Ys4-Ba-4GV">
+                                        <rect key="frame" x="0.0" y="307" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invite by EMail" lineBreakMode="tailTruncation" minimumFontSize="10" id="XYH-qM-6zO">
@@ -172,9 +165,6 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="87j-Jt-q7C" kind="push" id="iwB-mt-mPi"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -186,46 +176,7 @@
             </objects>
             <point key="canvasLocation" x="-3280" y="-8027"/>
         </scene>
-        <scene sceneID="veC-cM-gQB">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ9-DJ-zYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="LVT-2k-7RR" customClass="SMSViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mwg-4R-JLk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="jEJ-Pa-X7W">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="qlW-ug-hcw"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-2896" y="-7860"/>
-        </scene>
-        <scene sceneID="PAI-Tm-PQ0">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5N4-sg-KOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="OFn-F0-hpS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5HN-Dw-JWb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="S06-Vj-Kmf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="qKu-FD-m4S"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-2500" y="-7864"/>
-        </scene>
+        <!--About Us View Controller - About-->
         <scene sceneID="Rdc-1s-Yln">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SX-yb-1ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -249,6 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-2892" y="-8496"/>
         </scene>
+        <!--Settings View Controller-->
         <scene sceneID="ZqA-hC-l5n">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfE-2i-TLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,6 +259,7 @@
             </objects>
             <point key="canvasLocation" x="-2495" y="-8496"/>
         </scene>
+        <!--Camera View Controller - Camera-->
         <scene sceneID="ja4-91-AEV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2if-yO-hS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,6 +283,7 @@
             </objects>
             <point key="canvasLocation" x="-5701" y="-8013"/>
         </scene>
+        <!--Navigation Controller - Collage-->
         <scene sceneID="i4e-4O-zfa">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iuj-Zd-uzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,6 +306,7 @@
             </objects>
             <point key="canvasLocation" x="-5228" y="-8027"/>
         </scene>
+        <!--Standing Collage View Controller - Collage-->
         <scene sceneID="Kmg-Gn-2nv">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6K-Mb-vlz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,37 +316,40 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArt_CollageBackground.png" id="htz-nX-6TI">
-                                <rect key="frame" x="10" y="72" width="300" height="349"/>
+                                <rect key="frame" x="10" y="47" width="300" height="359"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <toolbar autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" tag="1001" contentMode="scaleToFill" barStyle="blackTranslucent" id="GGE-pM-VeJ">
-                                <rect key="frame" x="0.0" y="390" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem tag="101" title="New Collage" id="2hu-P0-OL3">
-                                        <connections>
-                                            <action selector="loadNewCollage:" destination="7s1-GS-yVn" id="uOl-Xl-T0f"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem enabled="NO" title="PickFrame" id="lan-yC-Bhc"/>
-                                </items>
-                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H35-1f-rGg">
+                                <rect key="frame" x="20" y="374" width="111" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="NewCollage">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hVh-po-5E9" kind="push" identifier="" id="aub-tM-Xpx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Collage" id="1nS-xc-8Vm"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="btnNewCollage" destination="2hu-P0-OL3" id="tIB-Fp-EZP"/>
-                        <outlet property="collageToolBar" destination="GGE-pM-VeJ" id="niR-Ym-sNn"/>
                         <outlet property="imageViewLastCollage" destination="htz-nX-6TI" id="jDc-jx-DzK"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-5223" y="-8629"/>
+            <point key="canvasLocation" x="-5051" y="-8774"/>
         </scene>
+        <!--Collage View Controller - Item-->
         <scene sceneID="bpa-Qa-nVR">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hF2-3W-NNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,69 +358,139 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" image="Overlay.png" id="s3y-sp-hvE">
+                            <imageView tag="101" contentMode="scaleToFill" image="Overlay.png" id="s3y-sp-hvE">
                                 <rect key="frame" x="1" y="12" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="c6s-TF-o2o" appends="YES" id="S4x-1A-mQ7"/>
+                                    <outletCollection property="gestureRecognizers" destination="JRK-je-W1a" appends="YES" id="pHF-0n-bxf"/>
+                                    <outletCollection property="gestureRecognizers" destination="7s7-Xv-bpw" appends="YES" id="yT9-kS-AAD"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="103" contentMode="scaleToFill" image="Overlay.png" id="KL2-AP-ofm">
+                            <imageView tag="103" contentMode="scaleToFill" image="Overlay.png" id="KL2-AP-ofm">
                                 <rect key="frame" x="215" y="12" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zaA-ET-t67" appends="YES" id="xd8-rM-sFC"/>
+                                    <outletCollection property="gestureRecognizers" destination="YGW-J5-NPe" appends="YES" id="Cti-Jj-pGg"/>
+                                    <outletCollection property="gestureRecognizers" destination="EEh-cW-XbM" appends="YES" id="Agc-77-euw"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="yIH-Co-NAe">
+                            <imageView tag="102" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="yIH-Co-NAe">
                                 <rect key="frame" x="108" y="12" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bNL-BX-erk" appends="YES" id="YLh-Ox-7dw"/>
+                                    <outletCollection property="gestureRecognizers" destination="mXz-uw-9Ku" appends="YES" id="77w-Ml-8nD"/>
+                                    <outletCollection property="gestureRecognizers" destination="fXD-6k-mRI" appends="YES" id="rr1-RE-LrJ"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="104" contentMode="scaleToFill" image="Overlay.png" id="BWp-fV-WQ6">
+                            <imageView tag="104" contentMode="scaleToFill" image="Overlay.png" id="BWp-fV-WQ6">
                                 <rect key="frame" x="1" y="129" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BoI-QO-we4" appends="YES" id="pEa-fa-PAu"/>
+                                    <outletCollection property="gestureRecognizers" destination="U3n-t7-HGV" appends="YES" id="wHT-fM-Srp"/>
+                                    <outletCollection property="gestureRecognizers" destination="JCL-xW-4oh" appends="YES" id="oby-Vp-TCp"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="106" contentMode="scaleToFill" image="Overlay.png" id="AO1-4N-wmu">
+                            <imageView tag="106" contentMode="scaleToFill" image="Overlay.png" id="AO1-4N-wmu">
                                 <rect key="frame" x="215" y="129" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tN2-1g-eo3" appends="YES" id="oym-ET-K5G"/>
+                                    <outletCollection property="gestureRecognizers" destination="Fl1-Gr-zor" appends="YES" id="uya-u9-NbQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="QTh-Wv-d11" appends="YES" id="cvf-5V-xXP"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="vKB-Mv-Mwc">
+                            <imageView tag="105" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="vKB-Mv-Mwc">
                                 <rect key="frame" x="108" y="129" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="n2k-Ko-4LO" appends="YES" id="pAp-uL-xhD"/>
+                                    <outletCollection property="gestureRecognizers" destination="qoD-7k-e8v" appends="YES" id="CGT-e0-5dA"/>
+                                    <outletCollection property="gestureRecognizers" destination="Txb-uQ-6DR" appends="YES" id="43k-dI-qp7"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="107" contentMode="scaleToFill" image="Overlay.png" id="V2S-Ot-WnF">
+                            <imageView tag="107" contentMode="scaleToFill" image="Overlay.png" id="V2S-Ot-WnF">
                                 <rect key="frame" x="2" y="247" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lqo-EL-vD5" appends="YES" id="wPg-QR-xqQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="cRQ-fy-Xmt" appends="YES" id="pnb-vR-mby"/>
+                                    <outletCollection property="gestureRecognizers" destination="P7d-Xz-3Cv" appends="YES" id="bQg-oV-NnI"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="109" contentMode="scaleToFill" image="Overlay.png" id="y23-TO-YGA">
+                            <imageView tag="109" contentMode="scaleToFill" image="Overlay.png" id="y23-TO-YGA">
                                 <rect key="frame" x="216" y="247" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GkX-Kf-Exj" appends="YES" id="emk-Xq-HkS"/>
+                                    <outletCollection property="gestureRecognizers" destination="MFV-DA-LWL" appends="YES" id="SzV-p5-Wwn"/>
+                                    <outletCollection property="gestureRecognizers" destination="oNh-Ee-WeT" appends="YES" id="MWZ-SG-CV8"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="108" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="KOI-JY-iTT">
+                            <imageView tag="108" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="KOI-JY-iTT">
                                 <rect key="frame" x="109" y="247" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L5x-ku-B1Y" appends="YES" id="iAl-c6-qqh"/>
+                                    <outletCollection property="gestureRecognizers" destination="0Wr-fJ-jeE" appends="YES" id="9J2-VV-uyj"/>
+                                    <outletCollection property="gestureRecognizers" destination="R7E-Ni-ruo" appends="YES" id="86M-g8-C9b"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="110" contentMode="scaleToFill" image="Overlay.png" id="Xkt-D5-Dkj">
+                            <imageView tag="110" contentMode="scaleToFill" image="Overlay.png" id="Xkt-D5-Dkj">
                                 <rect key="frame" x="1" y="364" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DGP-tW-wH3" appends="YES" id="dEq-pj-7Za"/>
+                                    <outletCollection property="gestureRecognizers" destination="zg3-4j-5Vb" appends="YES" id="tso-K5-Crn"/>
+                                    <outletCollection property="gestureRecognizers" destination="fUC-hr-nzV" appends="YES" id="EdL-z2-Wlw"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="112" contentMode="scaleToFill" image="Overlay.png" id="KUH-yk-yk8">
+                            <imageView tag="112" contentMode="scaleToFill" image="Overlay.png" id="KUH-yk-yk8">
                                 <rect key="frame" x="215" y="364" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SUP-Lg-pW6" appends="YES" id="dJs-JT-Uv0"/>
+                                    <outletCollection property="gestureRecognizers" destination="a8T-OP-7wl" appends="YES" id="prK-jp-D29"/>
+                                    <outletCollection property="gestureRecognizers" destination="434-uk-4ox" appends="YES" id="34S-1w-OdW"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="bsZ-Kp-xFN">
+                            <imageView tag="111" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="bsZ-Kp-xFN">
                                 <rect key="frame" x="108" y="364" width="104" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="N9L-Va-fs1">
-                                <rect key="frame" x="0.0" y="418" width="320" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="sliderValueChanged:" destination="hVh-po-5E9" eventType="valueChanged" id="ULx-hm-Qfh"/>
+                                    <outletCollection property="gestureRecognizers" destination="Inc-YR-a5n" appends="YES" id="cJw-Xn-TbA"/>
+                                    <outletCollection property="gestureRecognizers" destination="Eks-mz-uIN" appends="YES" id="C9P-6t-apF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ha4-vm-JcG" appends="YES" id="l0F-5A-rXi"/>
                                 </connections>
-                            </slider>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="Pfd-rS-g6m">
+                                <rect key="frame" x="269" y="32" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="IL2-GU-NsS"/>
                     <toolbarItems>
-                        <barButtonItem title="Cancel" id="S4p-BE-P7h">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="0nd-Rt-j5b"/>
+                        <barButtonItem title="Post To FB" id="guj-yt-HH0">
                             <connections>
-                                <action selector="dismissCollageView:" destination="hVh-po-5E9" id="PLn-te-x07"/>
+                                <action selector="btnPostToFB:" destination="hVh-po-5E9" id="ngm-eM-hbz"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="zll-aU-UW2"/>
@@ -474,12 +502,14 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="vSJ-4Q-Ycy"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackTranslucent" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="btnCollageCancel" destination="S4p-BE-P7h" id="N5O-mF-fek"/>
+                        <outlet property="activityIndicatorFacebookPostProgress" destination="Pfd-rS-g6m" id="e7T-BE-Bcc"/>
                         <outlet property="btnCollageCapture" destination="Hll-gU-zTV" id="dF4-IJ-k4c"/>
+                        <outlet property="btnPostToFaceBook" destination="guj-yt-HH0" id="hdq-tv-775"/>
                         <outlet property="imageView1" destination="s3y-sp-hvE" id="Vwf-Ll-6gB"/>
                         <outlet property="imageView10" destination="Xkt-D5-Dkj" id="ff7-oh-j64"/>
                         <outlet property="imageView11" destination="bsZ-Kp-xFN" id="Nai-BX-N9B"/>
@@ -492,12 +522,192 @@
                         <outlet property="imageView7" destination="V2S-Ot-WnF" id="4JK-OJ-Nlf"/>
                         <outlet property="imageView8" destination="KOI-JY-iTT" id="J1T-nh-KHn"/>
                         <outlet property="imageView9" destination="y23-TO-YGA" id="KLm-Xi-fmJ"/>
-                        <outlet property="sliderVertical" destination="N9L-Va-fs1" id="3vU-Hz-A6B"/>
                     </connections>
                 </viewController>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="c6s-TF-o2o">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="48l-hm-gWX"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="bNL-BX-erk">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="BhU-TL-lXC"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="zaA-ET-t67">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="xMY-rN-K0l"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BoI-QO-we4">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="NLS-XC-PEq"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="n2k-Ko-4LO">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="oJU-a7-yC4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="tN2-1g-eo3">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="cBf-P1-0qa"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lqo-EL-vD5">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="HVg-QH-2IJ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="L5x-ku-B1Y">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="5vK-t0-sHK"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GkX-Kf-Exj">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="qrf-6x-tMz"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="DGP-tW-wH3">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="ykm-Yq-EKa"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Inc-YR-a5n">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="XxW-D0-7KF"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SUP-Lg-pW6">
+                    <connections>
+                        <action selector="handlePan:" destination="hVh-po-5E9" id="1yj-QE-5xv"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="JRK-je-W1a">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="LkP-Nx-CcT"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="mXz-uw-9Ku">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="W6c-js-DVZ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="YGW-J5-NPe">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="vWM-il-RaE"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="U3n-t7-HGV">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="WdD-Xe-8Cp"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="qoD-7k-e8v">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="LUc-1L-5x8"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="Fl1-Gr-zor">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="NCW-wX-c4E"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="cRQ-fy-Xmt">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="zri-Mb-pDr"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="0Wr-fJ-jeE">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="ZQp-4F-eYu"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="MFV-DA-LWL">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="Qzf-HB-WXP"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="zg3-4j-5Vb">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="Bz6-kc-gUn"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="Eks-mz-uIN">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="qqN-XY-k8i"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="a8T-OP-7wl">
+                    <connections>
+                        <action selector="handlePinch:" destination="hVh-po-5E9" id="24z-L1-oIp"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="7s7-Xv-bpw">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="Bxh-o4-I5P"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="fXD-6k-mRI">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="hdZ-Kh-Cys"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="EEh-cW-XbM">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="5dR-t7-RsS"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="JCL-xW-4oh">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="uny-5i-tsT"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="Txb-uQ-6DR">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="chZ-v7-DDv"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="QTh-Wv-d11">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="ZxS-S6-8xA"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="P7d-Xz-3Cv">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="2wQ-2w-weZ"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="R7E-Ni-ruo">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="Fb4-dL-IZ4"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="oNh-Ee-WeT">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="B2c-bk-Z29"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="fUC-hr-nzV">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="j1u-mW-ze0"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="Ha4-vm-JcG">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="dLJ-pb-Gep"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <rotationGestureRecognizer id="434-uk-4ox">
+                    <connections>
+                        <action selector="handleRotate:" destination="hVh-po-5E9" id="iLE-BK-uLe"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-4795" y="-8629"/>
+            <point key="canvasLocation" x="-4501" y="-8827"/>
         </scene>
+        <!--Photo Twist Tab Bar Controller-->
         <scene sceneID="g2R-O7-l9G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4M9-g0-wgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -523,64 +733,72 @@
             </objects>
             <point key="canvasLocation" x="-5466" y="-7417"/>
         </scene>
+        <!--Standing Effects View Controller - Art-->
+        <scene sceneID="CCJ-cq-h19">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ma-IC-boP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="PcO-Gr-0nF" customClass="StandingEffectsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGI-7S-QN7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase9.jpg" id="aau-nC-rIm">
+                                <rect key="frame" x="7" y="46" width="300" height="295"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S2e-nu-Zhp">
+                                <rect key="frame" x="63" y="300" width="121" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start New Art">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="R7M-I7-xGl" kind="push" id="9NU-zh-C2t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Art" id="yUw-pK-uRe"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-4225" y="-8030"/>
+        </scene>
+        <!--Effects View Controller - Features-->
         <scene sceneID="BkE-eR-T9G">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TCv-wX-B4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="featuresVC" title="Features" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="R7M-I7-xGl" customClass="EffectsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="featuresVC" autoresizesArchivedViewToFullSize="NO" title="Features" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="R7M-I7-xGl" customClass="EffectsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIe-8r-eJg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SplashScreen_PhotoTwist.jpg" id="43h-wd-mB2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="Qip-TZ-ZhG">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="GrayImage" id="tzg-qX-WtM">
-                                        <connections>
-                                            <action selector="btnGrayImage:" destination="R7M-I7-xGl" id="WHW-56-0YZ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Negative" id="6Ck-AA-vmy">
-                                        <connections>
-                                            <action selector="btnNegateImage:" destination="R7M-I7-xGl" id="YPo-5L-9Di"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="H56-aQ-LLW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Frames" id="mWz-c0-dqO">
-                                        <connections>
-                                            <action selector="btnFramesClicked:" destination="R7M-I7-xGl" id="1UX-J1-DQL"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="PostToFB" id="AVm-Zo-q61">
-                                        <connections>
-                                            <action selector="postToFB:" destination="R7M-I7-xGl" id="NxP-hu-F86"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <view tag="101" contentMode="scaleToFill" id="g4I-fo-YRC">
                                 <rect key="frame" x="5" y="45" width="310" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" rowHeight="78" sectionHeaderHeight="3" sectionFooterHeight="3" id="cg8-c7-AJ8">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="139"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="framesTableViewCell" rowHeight="70" id="uoV-vm-fUs">
-                                                <rect key="frame" x="0.0" y="130" width="78" height="71"/>
+                                                <rect key="frame" x="0.0" y="46" width="310" height="71"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="10" y="1" width="58" height="69"/>
+                                                    <rect key="frame" x="10" y="1" width="290" height="69"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" tag="201" contentMode="scaleToFill" highlighted="YES" id="fwf-xo-SaP">
@@ -609,10 +827,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fYW-lH-0v6"/>
+                    <toolbarItems>
+                        <barButtonItem title="GrayImage" id="tzg-qX-WtM">
+                            <connections>
+                                <action selector="btnGrayImage:" destination="R7M-I7-xGl" id="WHW-56-0YZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="PostToFB" id="AVm-Zo-q61">
+                            <connections>
+                                <action selector="postToFB:" destination="R7M-I7-xGl" id="NxP-hu-F86"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Negative" id="6Ck-AA-vmy">
+                            <connections>
+                                <action selector="btnNegateImage:" destination="R7M-I7-xGl" id="YPo-5L-9Di"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Frames" id="mWz-c0-dqO">
+                            <connections>
+                                <action selector="btnFramesClicked:" destination="R7M-I7-xGl" id="1UX-J1-DQL"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Art" id="fYW-lH-0v6"/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="blackTranslucent"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -622,13 +862,12 @@
                         <outlet property="btnPostToFB" destination="AVm-Zo-q61" id="fvY-i5-YG2"/>
                         <outlet property="imageViewEffectsVC" destination="43h-wd-mB2" id="OFV-zs-ApO"/>
                         <outlet property="tableViewEffects" destination="cg8-c7-AJ8" id="sHc-Uq-rfT"/>
-                        <outlet property="toolBarBottom" destination="Qip-TZ-ZhG" id="F8X-Za-tRL"/>
-                        <outlet property="toolBarTop" destination="H56-aQ-LLW" id="0q8-3E-zUJ"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-3842" y="-8027"/>
+            <point key="canvasLocation" x="-3800" y="-8027"/>
         </scene>
+        <!--Navigation Controller - More-->
         <scene sceneID="DW9-Pn-3po">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flY-Fz-5XT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -651,46 +890,7 @@
             </objects>
             <point key="canvasLocation" x="-3274" y="-7431"/>
         </scene>
-        <scene sceneID="I7V-Q6-knu">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wme-Jj-C4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ZuW-kL-8xR" customClass="TwitterIntegrationViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jkl-pD-HnN">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="n30-2S-E87">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ny7-z5-7K4"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-2142" y="-7864"/>
-        </scene>
-        <scene sceneID="aZf-vP-f3b">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qGB-7j-yz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="87j-Jt-q7C" customClass="MailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zto-Ti-Hor">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PhotoArtBase.png" id="mrl-ar-YpS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="m9w-Zz-84y"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1782" y="-7864"/>
-        </scene>
+        <!--Navigation Controller - Art-->
         <scene sceneID="BuM-1c-lf1">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgG-Gx-rCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -704,16 +904,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="R7M-I7-xGl" kind="relationship" relationship="rootViewController" id="YPj-8k-4p6"/>
+                        <segue destination="PcO-Gr-0nF" kind="relationship" relationship="rootViewController" id="btg-u3-ts3"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-4368" y="-8027"/>
+            <point key="canvasLocation" x="-4652" y="-8027"/>
         </scene>
     </scenes>
     <resources>
         <image name="Overlay.png" width="72" height="72"/>
-        <image name="PhotoArtBase.png" width="320" height="480"/>
+        <image name="PhotoArtBase9.jpg" width="320" height="480"/>
         <image name="PhotoArtBase_About.jpg" width="320" height="480"/>
         <image name="PhotoArtSettings_tabbar.png" width="30" height="30"/>
         <image name="PhotoArt_CollageBackground.png" width="320" height="480"/>
@@ -737,11 +937,14 @@
         <class className="CollageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CollageViewController.h"/>
             <relationships>
+                <relationship kind="action" name="btnPostToFB:"/>
                 <relationship kind="action" name="captureScreenImage:"/>
-                <relationship kind="action" name="dismissCollageView:"/>
-                <relationship kind="action" name="sliderValueChanged:"/>
-                <relationship kind="outlet" name="btnCollageCancel" candidateClass="UIBarButtonItem"/>
+                <relationship kind="action" name="handlePan:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="handlePinch:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="handleRotate:" candidateClass="UIRotationGestureRecognizer"/>
+                <relationship kind="outlet" name="activityIndicatorFacebookPostProgress" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="btnCollageCapture" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="btnPostToFaceBook" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="imageView1" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageView10" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageView11" candidateClass="UIImageView"/>
@@ -754,7 +957,6 @@
                 <relationship kind="outlet" name="imageView7" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageView8" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageView9" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="sliderVertical" candidateClass="UISlider"/>
             </relationships>
         </class>
         <class className="EffectsViewController" superclassName="UIViewController">
@@ -763,7 +965,6 @@
                 <relationship kind="action" name="btnFramesClicked:"/>
                 <relationship kind="action" name="btnGrayImage:"/>
                 <relationship kind="action" name="btnNegateImage:"/>
-                <relationship kind="action" name="postImageToFacebook:"/>
                 <relationship kind="action" name="postToFB:"/>
                 <relationship kind="outlet" name="activityIndicatorFacebookPostProgress" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="btnGrayImage" candidateClass="UIBarButtonItem"/>
@@ -772,20 +973,13 @@
                 <relationship kind="outlet" name="imageViewEffectsVC" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="tableViewEffects" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="toolBarBottom" candidateClass="UIToolbar"/>
-                <relationship kind="outlet" name="toolBarTop" candidateClass="UIToolbar"/>
             </relationships>
-        </class>
-        <class className="MailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MailViewController.h"/>
         </class>
         <class className="MoreViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
         </class>
         <class className="PhotoTwistTabBarController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoTwistTabBarController.h"/>
-        </class>
-        <class className="SMSViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SMSViewController.h"/>
         </class>
         <class className="SettingsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
@@ -798,14 +992,11 @@
         <class className="StandingCollageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StandingCollageViewController.h"/>
             <relationships>
-                <relationship kind="action" name="loadNewCollage:"/>
-                <relationship kind="outlet" name="btnNewCollage" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="collageToolBar" candidateClass="UIToolbar"/>
                 <relationship kind="outlet" name="imageViewLastCollage" candidateClass="UIImageView"/>
             </relationships>
         </class>
-        <class className="TwitterIntegrationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterIntegrationViewController.h"/>
+        <class className="StandingEffectsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StandingEffectsViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MoreViewController : UITableViewController
-
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMessageComposeViewController.h>
+@interface MoreViewController : UITableViewController<MFMessageComposeViewControllerDelegate,MFMailComposeViewControllerDelegate>
+- (void)postOnFacebookWall;
 @end

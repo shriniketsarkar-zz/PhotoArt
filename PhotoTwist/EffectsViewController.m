@@ -12,48 +12,52 @@
 #import "ASIFormDataRequest.h"
 #import "JSON.h"
 
+@interface EffectsViewController()
+-(void) customizeEffectsViewController;
+-(void) invokeImagePicker;
+@end
+
+
+
 @implementation EffectsViewController
 @synthesize activityIndicatorFacebookPostProgress;
 @synthesize btnPostToFB;
 @synthesize tableViewEffects;
 @synthesize btnGrayImage;
 @synthesize btnNegative;
-@synthesize toolBarTop;
+//@synthesize toolBarTop;
 @synthesize toolBarBottom;
 
 @synthesize imageViewEffectsVC;
 @synthesize frameImagesArray;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)viewWillAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [self customizeEffectsViewController];
+    [self invokeImagePicker];
 }
-
-- (void)didReceiveMemoryWarning
+-(void)customizeEffectsViewController
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"PhotoArt_NavigationBarImage.png"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBarHidden = NO;
 }
+-(void)invokeImagePicker
+{
 
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentModalViewController:imagePicker animated:YES];
+}
 - (void)viewDidLoad
 {
-    [[UIApplication sharedApplication]setStatusBarHidden:YES];
+    //[[UIApplication sharedApplication]setStatusBarHidden:YES];
     frameImagesArray = [[NSArray alloc]initWithObjects:
                         [UIImage imageNamed:@"PhotoArt_BorderDesign1.jpg"],
                         [UIImage imageNamed:@"PhotoArt_BorderDesign2.gif"], nil];
     
     UIView *viewPop = [self.view viewWithTag:101];
     viewPop.hidden = YES;
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
-    imagePicker.delegate = self;
-    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentModalViewController:imagePicker animated:YES];
     [super viewDidLoad];
 }
 
@@ -63,7 +67,7 @@
     [self setImageViewEffectsVC:nil];
     [self setBtnGrayImage:nil];
     [self setBtnNegative:nil];
-    [self setToolBarTop:nil];
+//    [self setToolBarTop:nil];
     [self setToolBarBottom:nil];
 
     [self setTableViewEffects:nil];
@@ -74,15 +78,78 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+
+- (IBAction)btnNegateImage:(id)sender 
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    imageViewEffectsVC.image = [self generateImageUsingNegativeFilter:imageViewEffectsVC.image];
 }
-
-- (IBAction)btnNegateImage:(id)sender {
+-(UIImage *)generateImageUsingNegativeFilter : (UIImage *)inputImage
+{
+    // get width and height as integers, since we'll be using them as
+    // array subscripts, etc, and this'll save a whole lot of casting
+    CGSize size = inputImage.size;
+    int width = size.width;
+    int height = size.height;
+    
+    // Create a suitable RGB+alpha bitmap context in BGRA colour space
+    CGColorSpaceRef colourSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char *memoryPool = (unsigned char *)calloc(width*height*4, 1);
+    CGContextRef context = CGBitmapContextCreate(memoryPool, width, height, 8, width * 4, colourSpace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast);
+    CGColorSpaceRelease(colourSpace);
+    
+    // draw the current image to the newly created context
+    //        CGContextDrawImage(context, CGRectMake(0, 0, width, height), [self CGImage]);
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), [inputImage CGImage]);    
+    
+    // run through every pixel, a scan line at a time...
+    for(int y = 0; y < height; y++)
+    {
+        // get a pointer to the start of this scan line
+        unsigned char *linePointer = &memoryPool[y * width * 4];
+        
+        // step through the pixels one by one...
+        for(int x = 0; x < width; x++)
+        {
+            // get RGB values. We're dealing with premultiplied alpha
+            // here, so we need to divide by the alpha channel (if it
+            // isn't zero, of course) to get uninflected RGB. We
+            // multiply by 255 to keep precision while still using
+            // integers
+            int r, g, b; 
+            if(linePointer[3])
+            {
+                r = linePointer[0] * 255 / linePointer[3];
+                g = linePointer[1] * 255 / linePointer[3];
+                b = linePointer[2] * 255 / linePointer[3];
+            }
+            else
+                r = g = b = 0;
+            
+            // perform the colour inversion
+            r = 255 - r;
+            g = 255 - g;
+            b = 255 - b;
+            
+            // multiply by alpha again, divide by 255 to undo the
+            // scaling before, store the new values and advance
+            // the pointer we're reading pixel data from
+            linePointer[0] = r * linePointer[3] / 255;
+            linePointer[1] = g * linePointer[3] / 255;
+            linePointer[2] = b * linePointer[3] / 255;
+            linePointer += 4;
+        }
+    }
+    
+    // get a CG image from the context, wrap that into a
+    // UIImage
+    CGImageRef cgImage = CGBitmapContextCreateImage(context);
+    UIImage *returnImage = [UIImage imageWithCGImage:cgImage];
+    // clean up
+    CGImageRelease(cgImage);
+    CGContextRelease(context);
+    free(memoryPool);
+    return returnImage;
 }
-
 - (IBAction)btnFramesClicked:(id)sender 
 {
     UIView *viewPop = [self.view viewWithTag:101];
@@ -98,11 +165,7 @@
     {
         viewPop.hidden = YES;
     }
-    
-
-    
 }
-
 - (IBAction)btnGrayImage:(id)sender 
 {
     
@@ -130,12 +193,16 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissModalViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    imageViewEffectsVC.image = [info objectForKey:UIImagePickerControllerOriginalImage ];
     [self dismissModalViewControllerAnimated:YES];
+    imageViewEffectsVC.image = [info objectForKey:UIImagePickerControllerOriginalImage ];
 }
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event allTouches] anyObject];
@@ -143,15 +210,17 @@
     
     if (touch.tapCount == 2)
     {
-        if (self.toolBarTop.hidden)
+        if (self.navigationController.navigationBar.hidden)
         {
-            [self.toolBarTop setHidden:NO];
+//            [self.toolBarTop setHidden:NO];
+            self.navigationController.navigationBar.hidden = NO;
             [self.toolBarBottom setHidden:NO];
         }
         else
         {
+            self.navigationController.navigationBar.hidden = YES;
             [self.toolBarBottom setHidden:YES];
-            [self.toolBarTop setHidden:YES];
+//            [self.toolBarTop setHidden:YES];
         }
     }  
 }

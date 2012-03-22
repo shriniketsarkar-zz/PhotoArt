@@ -14,7 +14,6 @@
 }
 
 @property (nonatomic, assign) id delegate;
-
 -(void)selectedAssets:(NSArray*)_assets;
 -(void)cancelImagePicker;
 

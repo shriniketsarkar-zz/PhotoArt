@@ -7,7 +7,12 @@
 //
 
 #import "MoreViewController.h"
-
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
+#import "JSON.h"
+#import "PhotoTwistAppDelegate.h"
+#import "SVProgressHUD.h"
+#import "Twitter/Twitter.h"
 
 @implementation MoreViewController
 
@@ -130,14 +135,129 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Clicked. = %@",indexPath);
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell.reuseIdentifier isEqualToString:@"settingsShareOnFacebook"]) 
+    {
+        NSLog(@"The Cell is : %@",cell.reuseIdentifier);
+        [self postOnFacebookWall];
+    }
+    if ([cell.reuseIdentifier isEqualToString:@"settingsShareOnSMS"]) 
+    {
+        NSLog(@"The Cell is : %@",cell.reuseIdentifier);
+        MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc]init];
+        if ([MFMessageComposeViewController canSendText]) 
+        {
+            picker.messageComposeDelegate = self;
+            [picker setBody:@"I am using PhotoArt to create amazing Collage with Photo Art. You can try it too."];
+            picker.recipients = [NSArray arrayWithObject:@"1234567890"];
+            [self presentModalViewController:picker animated:YES];
+        }    
 
+    }
+    if ([cell.reuseIdentifier isEqualToString:@"settingsShareOnTweeter"]) 
+    {
+        NSLog(@"The Cell is : %@",cell.reuseIdentifier);
+        //Twitter Post for PhotoArt
+        TWTweetComposeViewController *twitter = [[TWTweetComposeViewController alloc] init]; 
+        [twitter setInitialText:@"Guys, I am using PhotoArt app for creating Collage with photos and awesome photo art.Try this app at..."]; 
+        [twitter addURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com"]]]; 
+        
+        if([TWTweetComposeViewController canSendTweet]) 
+            [self presentViewController:twitter animated:YES completion:nil]; 
+        else
+        { 
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Unable to tweet" message:@"Please log in to Twitter from you iPhones Settings." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil]; 
+            [alertView show]; 
+            return; 
+        } 
+        twitter.completionHandler = ^(TWTweetComposeViewControllerResult res)
+        { 
+            if (res == TWTweetComposeViewControllerResultDone) 
+            { 
+                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Tweet Successful!" message:@"Your tweet was Successful!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]; 
+                [alertView show];
+                //[self.navigationController popToRootViewControllerAnimated:YES];
+            } else if (res == TWTweetComposeViewControllerResultCancelled) 
+            {
+                //            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Oh Dear" message:@"Tweet Failed to send, try again later" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]; 
+                //            [alertView show];
+                
+            }
+            [self dismissModalViewControllerAnimated:YES]; 
+            //[self.navigationController popToRootViewControllerAnimated:YES];
+        };
+    }
+    if ([cell.reuseIdentifier isEqualToString:@"settingsShareOnEmail"]) 
+    {
+        NSLog(@"The Cell is : %@",cell.reuseIdentifier);
+        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc]init];
+        picker.mailComposeDelegate = self;
+        [picker setSubject:@"Try out PhotoArt."];
+        NSArray *toRecipients = [NSArray arrayWithObjects:@"firstlast@example.com", nil];
+        [picker setToRecipients:toRecipients];
+        NSString *emailBody = @"I am using PhotoArt to create amazing Collage with Photo Art. You can try it too.";
+        [picker setMessageBody:emailBody isHTML:NO];
+        [self presentModalViewController:picker animated:YES];
+    }
+[tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+}
+- (void)postOnFacebookWall
+{
+    PhotoTwistAppDelegate *appDelegate = (PhotoTwistAppDelegate *)[[UIApplication sharedApplication]delegate];
+    NSURL *url = [NSURL URLWithString:@"https://graph.facebook.com/me/feed"];
+    ASIFormDataRequest *newRequest = [ASIFormDataRequest requestWithURL:url];
+    [newRequest setPostValue:@"Photo art is an application for iPhone to get creative with Photos!" forKey:@"message"];
+    [newRequest setPostValue:@"PhotoArt" forKey:@"name"];
+    [newRequest setPostValue:@"Amazing app to get Creative with Photos." forKey:@"caption"];
+    [newRequest setPostValue:@"Try it out for free." forKey:@"description"];
+    [newRequest setPostValue:appDelegate.facebook.accessToken forKey:@"access_token"];
+    [newRequest setDidFinishSelector:@selector(postToWallFinished:)];
+    
+    [newRequest setDelegate:self];
+    [newRequest startAsynchronous];
+    
+}
+- (void)postToWallFinished:(ASIHTTPRequest *)request
+{
+    NSString *responseString = [request responseString];
+    
+    NSMutableDictionary *responseJSON = [responseString JSONValue];
+    NSString *postId = [responseJSON objectForKey:@"id"];
+    NSLog(@"Post id is: %@", postId);
+    //[activityIndicatorFacebookPostProgress stopAnimating];
+    UIAlertView *av = [[UIAlertView alloc] 
+                       initWithTitle:@"Sucessfully posted to photos & wall!" 
+                       message:@"Check out your Facebook to see!"
+                       delegate:nil 
+                       cancelButtonTitle:@"OK"
+                       otherButtonTitles:nil];
+	[av show];
+    //btnPostToFB.enabled = YES;
+    //activityIndicatorFacebookPostProgress.hidden = YES;
+}
+//The Message compose view controller delegate method
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    switch (result) 
+    {
+		case MessageComposeResultCancelled:
+			break;
+		case MessageComposeResultFailed:
+            [SVProgressHUD dismissWithError:@"Couldnt Send SMS. Try again."];
+			break;
+		case MessageComposeResultSent:
+			break;
+		default:
+			break;
+	}
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
+//The Mail compose view controller delegate method
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

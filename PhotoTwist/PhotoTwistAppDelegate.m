@@ -16,11 +16,12 @@
 
 
 @implementation PhotoTwistAppDelegate
-
+@synthesize A;
+@synthesize B=_B;
 @synthesize window = _window;
 @synthesize retainStateOfCollage=_retainStateOfCollage;
 @synthesize displayFBLoginUnavailableAlert = _displayFBLoginUnavailableAlert;
-
+@synthesize hasUserSelectedMultipleImages = _hasUserSelectedMultipleImages;
 @synthesize facebook;
 @synthesize selectedImagesForCollage = _selectedImagesForCollage;
 
@@ -41,7 +42,6 @@
 
         //[facebook authorize:nil];
     }
-    
     
     
     application.statusBarStyle =UIStatusBarStyleBlackTranslucent;
@@ -121,26 +121,7 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:fbUserName forKey:@"FBUserName"];
     }
-//    NSLog(@"The TABS: %@",self.window.rootViewController.tabBarController.vi);
-    for (UIViewController *vc in self.window.rootViewController.tabBarController.viewControllers)
-    {
-        if ([vc isKindOfClass:[MoreViewController class]]) 
-        {
-            MoreViewController *moreVC = (MoreViewController *)vc;
-            NSLog(@"MOREVC NAV: %@",moreVC.navigationController.viewControllers);
-            for (UIViewController *v in moreVC.navigationController.viewControllers)
-            {
-                if ([v isKindOfClass:[SettingsViewController class]])
-                {
-                    SettingsViewController *settingsVC = (SettingsViewController *)v;
-                    if ([settingsVC respondsToSelector:@selector(updateFacebookLoginStatus)]) 
-                    {
-                            [settingsVC updateFacebookLoginStatus];
-                    }
-                }
-            }
-        }
-    }
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

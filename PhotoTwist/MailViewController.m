@@ -37,23 +37,11 @@
 */
 
 
-//The Mail compose view controller delegate method
--(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
-{
-    [self dismissModalViewControllerAnimated:YES];
-}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc]init];
-    picker.mailComposeDelegate = self;
-    [picker setSubject:@"Try out PhotoArt."];
-    NSArray *toRecipients = [NSArray arrayWithObjects:@"firstlast@example.com", nil];
-    [picker setToRecipients:toRecipients];
-    NSString *emailBody = @"I am using PhotoArt to create amazing Collage with Photo Art. You can try it too.";
-    [picker setMessageBody:emailBody isHTML:NO];
-    [self presentModalViewController:picker animated:YES];
+
     [super viewDidLoad];
 }
 
